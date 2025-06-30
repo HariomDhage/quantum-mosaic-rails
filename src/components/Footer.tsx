@@ -4,6 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const handleJoinProgram = () => {
+    window.location.href = 'mailto:hello@quantummosaic.com?subject=Join the Pioneer Program&body=Hi, I am interested in joining the Quantum Mosaic Pioneer Program. Please send me more information.';
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -13,7 +17,10 @@ const Footer = () => {
             <p className="text-gray-300 mb-6 max-w-md">
               Building the world's first Execution Operating System for private capital markets.
             </p>
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button 
+              className="bg-blue-600 hover:bg-blue-700"
+              onClick={handleJoinProgram}
+            >
               Join the Pioneer Program
             </Button>
           </div>

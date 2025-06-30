@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -6,6 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Code, Eye, Shield } from 'lucide-react';
 
 const About = () => {
+  const handleJoinProgram = () => {
+    window.location.href = 'mailto:hello@quantummosaic.com?subject=Join the Pioneer Program&body=Hi, I am interested in joining the Quantum Mosaic Pioneer Program. Please send me more information.';
+  };
+
   const teamMembers = [
     {
       name: 'Deepak Jha',
@@ -164,7 +167,11 @@ const About = () => {
             <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
               Join us in creating the infrastructure that will power the next generation of private capital markets.
             </p>
-            <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 text-lg px-8 py-4">
+            <Button 
+              size="lg" 
+              className="bg-white text-blue-900 hover:bg-gray-100 text-lg px-8 py-4"
+              onClick={handleJoinProgram}
+            >
               Join the Pioneer Program
             </Button>
           </div>
