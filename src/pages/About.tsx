@@ -17,7 +17,7 @@ const About = () => {
       name: 'Deepak Jha',
       role: 'Founder',
       description: 'Deepak is a 2x founder with a deep background in enterprise sales and go-to-market strategy from his time at major firms like Oracle, GE, and Accenture.',
-      image: '/placeholder.svg'
+      image: '/lovable-uploads/3d5c0718-bd9b-4b57-ac6a-a401d893a537.png'
     },
     {
       name: 'Gunjan Karun',
