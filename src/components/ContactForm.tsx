@@ -12,6 +12,7 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
+import { Calendar, Mail } from 'lucide-react';
 
 interface ContactFormProps {
   isOpen: boolean;
@@ -51,7 +52,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
       `Message:\n${formData.message}`
     );
     
-    window.location.href = `mailto:hello@quantummosaic.com?subject=${subject}&body=${body}`;
+    window.open(`mailto:hello@quantummosaic.com?subject=${subject}&body=${body}`, '_blank');
 
     toast({
       title: "Opening Email Client",
@@ -70,15 +71,62 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     onClose();
   };
 
+  const handleScheduleMeeting = () => {
+    window.open('https://calendly.com/deepak-q-mosaic-ai/45min', '_blank');
+    toast({
+      title: "Opening Calendly",
+      description: "You can now schedule a meeting directly with Deepak Jha, our Founder.",
+    });
+    onClose();
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle>Join the Pioneer Program</DialogTitle>
           <DialogDescription>
-            Be among the first firms to enforce institutional logic as code. Fill out the form below and we'll get in touch.
+            Be among the first firms to enforce institutional logic as code. Choose how you'd like to connect with us.
           </DialogDescription>
         </DialogHeader>
+        
+        {/* Quick Action Buttons */}
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <Button 
+            onClick={handleScheduleMeeting}
+            className="flex items-center gap-2 h-12"
+            variant="outline"
+          >
+            <Calendar className="h-4 w-4" />
+            Schedule Meeting
+          </Button>
+          <Button 
+            onClick={() => {
+              const subject = encodeURIComponent('Join the Pioneer Program');
+              const body = encodeURIComponent('Hi, I am interested in joining the Quantum Mosaic Pioneer Program. Please send me more information.');
+              window.open(`mailto:hello@quantummosaic.com?subject=${subject}&body=${body}`, '_blank');
+              toast({
+                title: "Opening Email Client",
+                description: "Your default email client should open with a pre-filled message.",
+              });
+              onClose();
+            }}
+            className="flex items-center gap-2 h-12"
+            variant="outline"
+          >
+            <Mail className="h-4 w-4" />
+            Send Quick Email
+          </Button>
+        </div>
+
+        <div className="relative">
+          <div className="absolute inset-0 flex items-center">
+            <span className="w-full border-t" />
+          </div>
+          <div className="relative flex justify-center text-xs uppercase">
+            <span className="bg-background px-2 text-muted-foreground">Or fill out the form</span>
+          </div>
+        </div>
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
