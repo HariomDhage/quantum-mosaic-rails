@@ -52,7 +52,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
       `Message:\n${formData.message}`
     );
     
-    window.open(`mailto:hello@quantummosaic.com?subject=${subject}&body=${body}`, '_blank');
+    window.open(`mailto:deepak@q-mosaic-ai.com?subject=${subject}&body=${body}`, '_blank');
 
     toast({
       title: "Opening Email Client",
@@ -104,7 +104,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
             onClick={() => {
               const subject = encodeURIComponent('Join the Pioneer Program');
               const body = encodeURIComponent('Hi, I am interested in joining the Quantum Mosaic Pioneer Program. Please send me more information.');
-              window.open(`mailto:hello@quantummosaic.com?subject=${subject}&body=${body}`, '_blank');
+              window.open(`mailto:deepak@q-mosaic-ai.com?subject=${subject}&body=${body}`, '_blank');
               toast({
                 title: "Opening Email Client",
                 description: "Your default email client should open with a pre-filled message.",

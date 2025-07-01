@@ -39,7 +39,7 @@ const Footer = () => {
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <p className="text-gray-300">hello@quantummosaic.com</p>
+              <p className="text-gray-300">deepak@q-mosaic-ai.com</p>
               <p className="text-gray-300">+1 (555) 123-4567</p>
             </div>
           </div>
