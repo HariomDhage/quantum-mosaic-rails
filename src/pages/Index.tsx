@@ -3,6 +3,8 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
+import WhatWeSolveSection from '@/components/WhatWeSolveSection';
+import ArchitectureSection from '@/components/ArchitectureSection';
 import WhyNowSection from '@/components/WhyNowSection';
 import ComparisonTable from '@/components/ComparisonTable';
 import SolutionSection from '@/components/SolutionSection';
@@ -18,6 +20,8 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <WhatWeSolveSection />
+        <ArchitectureSection />
         <WhyNowSection />
         <ComparisonTable />
         <SolutionSection />
