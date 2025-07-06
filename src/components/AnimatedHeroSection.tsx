@@ -45,12 +45,12 @@ const AnimatedHeroSection = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-20 animate-pulse opacity-20">
             <div className="bg-emerald-400/20 p-3 rounded font-mono text-sm">
-              if (IC_vote >= 3) → execute()
+              if (IC_vote {'>'}= 3) → execute()
             </div>
           </div>
           <div className="absolute top-40 right-32 animate-pulse opacity-20 delay-1000">
             <div className="bg-orange-400/20 p-3 rounded font-mono text-sm">
-              ESG_score > B → approve_vendor()
+              ESG_score {'>'} B → approve_vendor()
             </div>
           </div>
           <div className="absolute bottom-32 left-40 animate-pulse opacity-20 delay-2000">

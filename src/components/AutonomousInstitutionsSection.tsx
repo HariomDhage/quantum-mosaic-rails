@@ -89,23 +89,26 @@ const AutonomousInstitutionsSection = () => {
         {/* Demo Tabs */}
         <div className="flex justify-center mb-12">
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
-            {demos.map((demo, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setActiveDemo(index);
-                  setAnimationStep(0);
-                }}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeDemo === index
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'text-gray-600 hover:bg-gray-100'
-                }`}
-              >
-                <demo.icon className="h-5 w-5 inline mr-2" />
-                {demo.title}
-              </button>
-            ))}
+            {demos.map((demo, index) => {
+              const IconComponent = demo.icon;
+              return (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setActiveDemo(index);
+                    setAnimationStep(0);
+                  }}
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                    activeDemo === index
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'text-gray-600 hover:bg-gray-100'
+                  }`}
+                >
+                  <IconComponent className="h-5 w-5 inline mr-2" />
+                  {demo.title}
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -115,9 +118,9 @@ const AutonomousInstitutionsSection = () => {
             <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ${
               getColorClasses(demos[activeDemo].color, 'bg')
             }/20`}>
-              <demos[activeDemo].icon className={`h-8 w-8 ${
-                getColorClasses(demos[activeDemo].color, 'text')
-              }`} />
+              {React.createElement(demos[activeDemo].icon, {
+                className: `h-8 w-8 ${getColorClasses(demos[activeDemo].color, 'text')}`
+              })}
             </div>
             <h3 className="text-3xl font-bold text-gray-900 mb-2">
               {demos[activeDemo].title}
