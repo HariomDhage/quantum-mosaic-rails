@@ -78,20 +78,9 @@ const AnimatedHeroSection = () => {
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl mb-6 text-blue-100 leading-relaxed">
-                Every institution makes plans. But few can guarantee they're followed — let alone enforced in real time.
-              </p>
-              
-              <p className="text-xl md:text-2xl mb-6 text-blue-100 leading-relaxed">
-                That's where Quantum Mosaic (QM) comes in.
-              </p>
-              
-              <p className="text-lg mb-8 text-blue-200 leading-relaxed">
-                We're building something foundational: a new Execution Operating System (XOS) that lets leaders encode their judgment, policies, and strategic intent into a living layer of executable logic. Not in hindsight. Not on paper. But at runtime.
-              </p>
-              
-              <p className="text-lg mb-8 text-emerald-300 font-semibold">
-                And this is just the beginning.
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
+                What if your strategy could execute itself? Welcome to the world where governance becomes code, 
+                compliance becomes automatic, and trust becomes programmable.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -113,58 +102,58 @@ const AnimatedHeroSection = () => {
               </div>
             </div>
 
-            {/* Right Side - Strategy in Motion Visual */}
+            {/* Right Side - Execution Flow Animation */}
             <div className="relative">
-              <div className="relative">
-                {/* Main Image with Animation Overlay */}
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src="/lovable-uploads/538a16c4-7faa-4616-adec-3eeeacbb0140.png" 
-                    alt="Strategy in Motion Dashboard" 
-                    className="w-full h-auto transform transition-transform duration-500 hover:scale-105"
-                  />
-                  
-                  {/* Animated Overlay Effects */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-blue-500/10 animate-pulse"></div>
-                  
-                  {/* Floating Animation Dots */}
-                  <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-emerald-400 rounded-full animate-ping opacity-75"></div>
-                  <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-75 delay-1000"></div>
-                  <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-orange-400 rounded-full animate-ping opacity-75 delay-2000"></div>
-                  
-                  {/* Processing Indicator Animation */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-slate-800/80 backdrop-blur-sm rounded-lg p-3 border border-slate-600">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                        <span className="text-sm text-slate-300 font-mono">
-                          {animationStep === executionSteps.length - 1 ? '✅ Executed' : 'Processing...'}
-                        </span>
-                        {animationStep < executionSteps.length - 1 && (
-                          <Zap className="h-4 w-4 text-emerald-400 animate-pulse" />
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
+                <h3 className="text-xl font-semibold mb-8 text-center text-slate-300">
+                  Strategy in Motion
+                </h3>
                 
-                {/* Strategy Steps Indicator */}
-                <div className="absolute -left-8 top-1/2 transform -translate-y-1/2">
-                  <div className="space-y-4">
-                    {executionSteps.map((step, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className={`w-3 h-3 rounded-full transition-all duration-500 ${
-                          animationStep >= index 
-                            ? 'bg-emerald-400 shadow-lg shadow-emerald-400/50 scale-125' 
-                            : 'bg-slate-600 scale-100'
-                        }`}></div>
-                        <div className={`text-xs font-medium transition-all duration-500 ${
-                          animationStep === index ? 'text-emerald-300 scale-110' : 'text-slate-400'
+                <div className="space-y-6">
+                  {executionSteps.map((step, index) => (
+                    <div key={index} className="flex items-center space-x-4">
+                      <div className={`w-4 h-4 rounded-full transition-all duration-500 ${
+                        animationStep >= index 
+                          ? 'bg-emerald-400 shadow-lg shadow-emerald-400/50' 
+                          : 'bg-slate-600'
+                      }`}></div>
+                      
+                      <div className={`flex-1 p-3 rounded-lg transition-all duration-500 ${
+                        animationStep === index 
+                          ? 'bg-emerald-400/20 border border-emerald-400/50 shadow-lg shadow-emerald-400/20' 
+                          : 'bg-slate-700/50'
+                      }`}>
+                        <span className={`font-medium ${
+                          animationStep === index ? 'text-emerald-300' : 'text-slate-300'
                         }`}>
                           {step}
-                        </div>
+                        </span>
                       </div>
-                    ))}
+                      
+                      {animationStep === index && (
+                        <div className="animate-pulse">
+                          {index === executionSteps.length - 1 ? (
+                            <CheckCircle className="h-6 w-6 text-emerald-400" />
+                          ) : (
+                            <Zap className="h-6 w-6 text-emerald-400" />
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Final Execution State */}
+                <div className="mt-8 text-center">
+                  <div className={`inline-flex items-center px-6 py-3 rounded-full transition-all duration-1000 ${
+                    animationStep === executionSteps.length - 1
+                      ? 'bg-emerald-400/20 border border-emerald-400 text-emerald-300 shadow-lg shadow-emerald-400/30'
+                      : 'bg-slate-700/50 text-slate-400'
+                  }`}>
+                    <Code2 className="h-5 w-5 mr-2" />
+                    <span className="font-semibold">
+                      {animationStep === executionSteps.length - 1 ? '✅ Executed' : 'Processing...'}
+                    </span>
                   </div>
                 </div>
               </div>
