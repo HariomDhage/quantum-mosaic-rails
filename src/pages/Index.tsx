@@ -2,7 +2,10 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import HeroSection from '@/components/HeroSection';
+import AnimatedHeroSection from '@/components/AnimatedHeroSection';
+import TransformationSection from '@/components/TransformationSection';
+import AutonomousInstitutionsSection from '@/components/AutonomousInstitutionsSection';
+import BLUFStudioSection from '@/components/BLUFStudioSection';
 import WhatWeSolveSection from '@/components/WhatWeSolveSection';
 import ArchitectureSection from '@/components/ArchitectureSection';
 import WhyNowSection from '@/components/WhyNowSection';
@@ -19,7 +22,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <HeroSection />
+        <AnimatedHeroSection />
+        <TransformationSection />
+        <AutonomousInstitutionsSection />
+        <BLUFStudioSection />
         <WhatWeSolveSection />
         <ArchitectureSection />
         <WhyNowSection />
