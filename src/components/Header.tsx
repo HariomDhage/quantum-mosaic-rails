@@ -17,8 +17,12 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-bold text-gray-900">
-                Quantum Mosaic
+              <Link to="/" className="flex items-center space-x-3">
+                <img 
+                  src="/lovable-uploads/75289ea3-b4a2-4a5a-8bc3-ef715cc22308.png" 
+                  alt="Quantum Mosaic Logo" 
+                  className="h-8 w-auto"
+                />
               </Link>
             </div>
             

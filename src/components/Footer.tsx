@@ -17,7 +17,13 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">Quantum Mosaic</h3>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/75289ea3-b4a2-4a5a-8bc3-ef715cc22308.png" 
+                  alt="Quantum Mosaic Logo" 
+                  className="h-10 w-auto"
+                />
+              </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Building the world's first Execution Operating System for private capital markets.
               </p>
