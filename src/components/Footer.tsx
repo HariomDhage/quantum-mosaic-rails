@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -19,7 +18,7 @@ const Footer = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/753cfba0-0ee2-4421-ae25-53b8df3b8669.png" 
+                  src="/lovable-uploads/291984d7-024e-4a9e-8d15-9ca4adfd7fed.png" 
                   alt="Quantum Mosaic Logo" 
                   className="h-10 w-auto"
                 />
