@@ -74,7 +74,7 @@ const AnimatedHeroSection = () => {
                 variant="outline"
                 className="border-blue-400 bg-blue-600/20 text-blue-200 hover:bg-blue-600/30 hover:border-blue-300 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
-                See How It Works
+                See How XOS Works
               </Button>
             </div>
           </div>
