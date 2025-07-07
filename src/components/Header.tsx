@@ -25,7 +25,7 @@ const Header = () => {
                 <img 
                   src="/lovable-uploads/291984d7-024e-4a9e-8d15-9ca4adfd7fed.png" 
                   alt="Quantum Mosaic Logo" 
-                  className="h-8 w-auto"
+                  className="h-12 w-auto brightness-110 contrast-110"
                 />
               </Link>
             </div>
