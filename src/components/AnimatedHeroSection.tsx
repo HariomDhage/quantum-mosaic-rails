@@ -11,6 +11,10 @@ const AnimatedHeroSection = () => {
     setIsFormOpen(true);
   };
 
+  const handleVideoDemo = () => {
+    window.open('https://share.synthesia.io/3f373475-6df6-46ae-9c7a-738065eb8b15', '_blank');
+  };
+
   return (
     <>
       <section className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden flex items-center">
@@ -66,9 +70,9 @@ const AnimatedHeroSection = () => {
               </Button>
               
               <Button
-                onClick={handleDemo}
+                onClick={handleVideoDemo}
                 variant="outline"
-                className="border-slate-400 text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold text-lg"
+                className="border-blue-400 bg-blue-600/20 text-blue-200 hover:bg-blue-600/30 hover:border-blue-300 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
                 Get Early Access
               </Button>
