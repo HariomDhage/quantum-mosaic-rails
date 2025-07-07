@@ -38,7 +38,11 @@ const Header = () => {
               >
                 Home
               </Link>
-              <Link to="/about" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              <Link 
+                to="/about" 
+                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
                 About
               </Link>
             </nav>
