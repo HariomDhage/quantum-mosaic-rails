@@ -58,7 +58,7 @@ const About = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-5xl font-bold mb-6">
-                  Building the World's First Execution Operating System
+                  Building the World's First Execution Operating System (XOS)
                 </h1>
                 <p className="text-xl text-blue-100 leading-relaxed">
                   The private capital market is one of the most powerful engines for growth in the world, yet it runs on invisible friction. Critical decisions are managed by fragmented emails, static PDFs, and human memory, creating enormous operational and compliance risk. At Quantum Mosaic, our mission is to replace that friction with certainty. We are building the programmable infrastructure that allows institutions to codify their policies and enforce them automatically. We believe that when execution is guaranteed, capital can move with confidence and speed.
