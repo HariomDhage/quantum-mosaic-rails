@@ -23,7 +23,7 @@ const About = () => {
       name: 'Gunjan Karun',
       role: 'CTO',
       description: 'Gunjan leads our technology vision with deep expertise in event-driven architecture, policy engines, and AI/NLP. He holds three U.S. patents in related fields.',
-      image: '/placeholder.svg'
+      image: '/lovable-uploads/04780c8a-ef04-4a44-a628-b8b42e08a2bc.png'
     }
   ];
 
