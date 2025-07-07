@@ -30,7 +30,7 @@ const Footer = () => {
                 className="bg-blue-600 hover:bg-blue-700"
                 onClick={handleJoinProgram}
               >
-                Join the Pioneer Program
+                Join the XOS Pioneer Program
               </Button>
             </div>
             

@@ -43,7 +43,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     setIsSubmitting(true);
 
     // Create mailto link with form data
-    const subject = encodeURIComponent('Join the Pioneer Program - ' + formData.name);
+    const subject = encodeURIComponent('Join the XOS Pioneer Program - ' + formData.name);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
@@ -84,7 +84,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>Join the Pioneer Program</DialogTitle>
+          <DialogTitle>Join the XOS Pioneer Program</DialogTitle>
           <DialogDescription>
             Be among the first firms to enforce institutional logic as code. Choose how you'd like to connect with us.
           </DialogDescription>
@@ -102,7 +102,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           </Button>
           <Button 
             onClick={() => {
-              const subject = encodeURIComponent('Join the Pioneer Program');
+              const subject = encodeURIComponent('Join the XOS Pioneer Program');
               const body = encodeURIComponent('Hi, I am interested in joining the Quantum Mosaic Pioneer Program. Please send me more information.');
               window.open(`mailto:deepak@q-mosaic-ai.com?subject=${subject}&body=${body}`, '_blank');
               toast({

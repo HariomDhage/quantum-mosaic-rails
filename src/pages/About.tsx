@@ -160,7 +160,7 @@ const About = () => {
                 className="bg-white text-blue-900 hover:bg-gray-100 text-lg px-8 py-4"
                 onClick={handleJoinProgram}
               >
-                Join the Pioneer Program
+                Join the XOS Pioneer Program
               </Button>
             </div>
           </section>
