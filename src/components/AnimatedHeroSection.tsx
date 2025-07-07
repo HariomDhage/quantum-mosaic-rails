@@ -24,25 +24,6 @@ const AnimatedHeroSection = () => {
             backgroundSize: '50px 50px'
           }}></div>
         </div>
-
-        {/* Floating Code Snippets */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 animate-pulse opacity-20">
-            <div className="bg-emerald-400/20 p-3 rounded font-mono text-sm">
-              if (IC_vote {'>'}= 3) → execute()
-            </div>
-          </div>
-          <div className="absolute top-40 right-32 animate-pulse opacity-20 delay-1000">
-            <div className="bg-orange-400/20 p-3 rounded font-mono text-sm">
-              ESG_score {'>'} B → approve_vendor()
-            </div>
-          </div>
-          <div className="absolute bottom-32 left-40 animate-pulse opacity-20 delay-2000">
-            <div className="bg-blue-400/20 p-3 rounded font-mono text-sm">
-              NAV_threshold_met → capital_call()
-            </div>
-          </div>
-        </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
