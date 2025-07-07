@@ -70,7 +70,7 @@ const AnimatedHeroSection = () => {
                 </span>
               </div>
               
-              <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
                 The Rise of
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
@@ -78,10 +78,20 @@ const AnimatedHeroSection = () => {
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-                What if your strategy could execute itself? Welcome to the world where governance becomes code, 
-                compliance becomes automatic, and trust becomes programmable.
-              </p>
+              <div className="space-y-6 text-lg md:text-xl text-blue-100 leading-relaxed mb-8">
+                <p>
+                  Every institution makes plans. But few can guarantee they're followed — let alone enforced in real time.
+                </p>
+                <p>
+                  That's where <span className="text-emerald-400 font-semibold">Quantum Mosaic (QM)</span> comes in.
+                </p>
+                <p>
+                  We're building something foundational: a new <span className="text-emerald-400 font-semibold">Execution Operating System (XOS)</span> that lets leaders encode their judgment, policies, and strategic intent into a living layer of executable logic. Not in hindsight. Not on paper. But at runtime.
+                </p>
+                <p className="text-emerald-300 font-medium">
+                  And this is just the beginning.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
