@@ -19,9 +19,9 @@ const Header = () => {
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-3">
                 <img 
-                  src="/lovable-uploads/eb3c7599-a7d9-43a6-8957-12a859e4cca4.png" 
+                  src="/lovable-uploads/291984d7-024e-4a9e-8d15-9ca4adfd7fed.png" 
                   alt="Quantum Mosaic Logo" 
-                  className="h-10 w-auto"
+                  className="h-8 w-auto"
                 />
               </Link>
             </div>
