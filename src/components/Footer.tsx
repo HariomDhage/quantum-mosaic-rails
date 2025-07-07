@@ -24,7 +24,7 @@ const Footer = () => {
                 />
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
-                Building the world's first Execution Operating System for private capital markets.
+                Building the world's first Execution Operating System (XOS) for private capital markets.
               </p>
               <Button 
                 className="bg-blue-600 hover:bg-blue-700"
