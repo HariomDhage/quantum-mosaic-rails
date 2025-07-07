@@ -27,20 +27,7 @@ const About = () => {
     }
   ];
 
-  const advisors = [
-    {
-      name: 'John Smith',
-      role: 'Executive Title, Top-Tier Investment Company',
-      description: 'Their expertise in private credit operations helps us sharpen our product roadmap for our core GP clients.',
-      image: '/placeholder.svg'
-    },
-    {
-      name: 'Jane Doe',
-      role: 'Title, Prominent Tech Company',
-      description: 'Their experience in building scalable enterprise platforms provides invaluable guidance for our technical architecture.',
-      image: '/placeholder.svg'
-    }
-  ];
+  // Advisors section replaced with general description
 
   const philosophies = [
     {
@@ -119,22 +106,19 @@ const About = () => {
               </div>
 
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-gray-900">Our Advisors</h3>
+                <h3 className="text-3xl font-bold text-gray-900">Guided by Industry Pioneers</h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {advisors.map((advisor, index) => (
-                  <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center">
-                    <img 
-                      src={advisor.image} 
-                      alt={advisor.name}
-                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                    />
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{advisor.name}</h4>
-                    <p className="text-blue-600 font-semibold mb-4 text-sm">{advisor.role}</p>
-                    <p className="text-gray-600 text-sm">{advisor.description}</p>
-                  </div>
-                ))}
+              <div className="max-w-4xl mx-auto text-center">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Quantum Mosaic is built with the strategic guidance of a world-class advisory board — including leaders from institutional investing, AI infrastructure, regulatory compliance, enterprise software, and private capital markets.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Our advisors bring deep domain expertise and real-world insight to help us navigate complexity, anticipate market needs, and build execution infrastructure that's not just visionary — but operationally sound and trusted by the industry.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  From CIOs of multi-billion-dollar portfolios to AI architects and regulatory veterans — our advisory circle ensures QM delivers at the intersection of trust, precision, and scale.
+                </p>
               </div>
             </div>
           </section>
