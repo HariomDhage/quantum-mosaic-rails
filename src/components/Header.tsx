@@ -17,7 +17,11 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-3">
+              <Link 
+                to="/" 
+                className="flex items-center space-x-3"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
                 <img 
                   src="/lovable-uploads/291984d7-024e-4a9e-8d15-9ca4adfd7fed.png" 
                   alt="Quantum Mosaic Logo" 
@@ -27,7 +31,11 @@ const Header = () => {
             </div>
             
             <nav className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+              <Link 
+                to="/" 
+                className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
                 Home
               </Link>
               <Link to="/about" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
