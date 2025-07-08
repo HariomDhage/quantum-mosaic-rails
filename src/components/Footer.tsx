@@ -38,7 +38,7 @@ const Footer = () => {
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2">
                 <li><Link to="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
-                <li><a href="#contact" className="text-gray-300 hover:text-white">Contact</a></li>
+                <li><a href="mailto:deepak@q-mosaic-ai.com" className="text-gray-300 hover:text-white">Contact</a></li>
               </ul>
             </div>
             
