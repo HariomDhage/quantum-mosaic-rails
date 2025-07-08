@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm space-y-1">
+            <div className="text-gray-400 text-sm space-y-1 text-center">
               <p>© 2025 Quantum Mosaic. All rights reserved.</p>
               <p>Made with ❤️ from Silicon Valley</p>
             </div>
