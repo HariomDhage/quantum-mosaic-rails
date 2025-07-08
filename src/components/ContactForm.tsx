@@ -168,24 +168,26 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="title">Title</Label>
+              <Label htmlFor="title">Title *</Label>
               <Input
                 id="title"
                 name="title"
                 value={formData.title}
                 onChange={handleChange}
+                required
                 placeholder="Your role"
               />
             </div>
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="message">Tell us about your execution challenges</Label>
+            <Label htmlFor="message">Tell us about your execution challenges *</Label>
             <Textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
+              required
               placeholder="What workflows keep you up at night? What manual processes would you like to automate?"
               rows={4}
             />
