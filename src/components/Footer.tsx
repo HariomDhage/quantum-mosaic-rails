@@ -44,7 +44,7 @@ const Footer = () => {
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <p className="text-gray-300">deepak@q-mosaic-ai.com</p>
+              <a href="mailto:deepak@q-mosaic-ai.com" className="text-gray-300 hover:text-white">deepak@q-mosaic-ai.com</a>
               <p className="text-gray-300">+1 (669) 400-6038</p>
             </div>
           </div>
