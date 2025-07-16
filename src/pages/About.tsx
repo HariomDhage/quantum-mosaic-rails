@@ -17,13 +17,13 @@ const About = () => {
       name: 'Deepak Jha',
       role: 'Founder',
       description: 'Deepak is a 2x founder with a deep background in enterprise sales and go-to-market strategy from his time at major firms like Oracle, GE, and Accenture.',
-      image: '/lovable-uploads/3d5c0718-bd9b-4b57-ac6a-a401d893a537.png'
+      image: '/images/deepak-jha.png'
     },
     {
       name: 'Gunjan Karun',
       role: 'CTO',
       description: 'Gunjan leads our technology vision with deep expertise in event-driven architecture, policy engines, and AI/NLP. He holds three U.S. patents in related fields.',
-      image: '/lovable-uploads/04780c8a-ef04-4a44-a628-b8b42e08a2bc.png'
+      image: '/images/gunjan-karun.png'
     }
   ];
 

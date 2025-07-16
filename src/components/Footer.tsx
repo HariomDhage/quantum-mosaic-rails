@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/291984d7-024e-4a9e-8d15-9ca4adfd7fed.png" 
+                  src="/images/quantum-mosaic-logo.png" 
                   alt="Quantum Mosaic Logo" 
                   className="h-10 w-auto"
                 />
