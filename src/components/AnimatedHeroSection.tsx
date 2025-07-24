@@ -37,7 +37,7 @@ const AnimatedHeroSection = () => {
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 leading-tight">
               The Rise of
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
@@ -45,7 +45,7 @@ const AnimatedHeroSection = () => {
               </span>
             </h1>
             
-            <div className="space-y-6 text-lg md:text-xl text-blue-100 leading-relaxed mb-8">
+            <div className="space-y-6 text-base sm:text-lg md:text-xl text-blue-100 leading-relaxed mb-8">
               <p>
                 Every institution makes plans. But few can guarantee they're followed — let alone enforced in real time.
               </p>
@@ -63,16 +63,16 @@ const AnimatedHeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 onClick={handleDemo}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-emerald-600/25"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-lg hover:shadow-emerald-600/25"
               >
                 Book a Pilot Call
-                <ChevronRight className="ml-2 h-5 w-5" />
+                <ChevronRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
               </Button>
               
               <Button
                 onClick={handleVideoDemo}
                 variant="outline"
-                className="border-blue-400 bg-blue-600/20 text-blue-200 hover:bg-blue-600/30 hover:border-blue-300 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                className="border-blue-400 bg-blue-600/20 text-blue-200 hover:bg-blue-600/30 hover:border-blue-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300"
               >
                 See How XOS Works
               </Button>

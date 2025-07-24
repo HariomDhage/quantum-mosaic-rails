@@ -2,13 +2,19 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import ContactForm from './ContactForm';
 
 const Header = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleJoinProgram = () => {
     setIsFormOpen(true);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -49,14 +55,56 @@ const Header = () => {
 
             <div className="flex items-center space-x-4">
               <Button 
-                className="bg-blue-600 hover:bg-blue-700"
+                className="bg-blue-600 hover:bg-blue-700 hidden sm:block"
                 onClick={handleJoinProgram}
               >
                 Join the XOS Pioneer Program
               </Button>
+              <Button 
+                className="bg-blue-600 hover:bg-blue-700 sm:hidden"
+                onClick={handleJoinProgram}
+              >
+                Join XOS
+              </Button>
+              
+              {/* Mobile menu button */}
+              <button
+                className="md:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                onClick={toggleMobileMenu}
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
             </div>
           </div>
         </div>
+        
+        {/* Mobile menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t">
+            <div className="px-4 pt-2 pb-3 space-y-1">
+              <Link 
+                to="/" 
+                className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-md text-base font-medium"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-md text-base font-medium"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
+                About
+              </Link>
+            </div>
+          </div>
+        )}
       </header>
       
       <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
