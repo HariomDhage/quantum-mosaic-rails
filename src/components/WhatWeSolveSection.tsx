@@ -11,23 +11,23 @@ const WhatWeSolveSection = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section data-section="what-we-solve" className="py-16 sm:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-slate-900 mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 sm:mb-6">
             What We Solve
           </h2>
-          <div className="text-2xl text-red-600 font-semibold mb-8 animate-pulse">
+          <div className="text-lg sm:text-xl md:text-2xl text-red-600 font-semibold mb-6 sm:mb-8 animate-pulse px-4 sm:px-0">
             Private capital workflows are broken.
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left Side - Chaos */}
           <div className="relative">
-            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-red-200">
-              <h3 className="text-2xl font-bold text-red-700 mb-6 flex items-center">
-                <AlertTriangle className="h-8 w-8 mr-3 animate-bounce" />
+            <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-red-200 mx-4 sm:mx-0">
+              <h3 className="text-xl sm:text-2xl font-bold text-red-700 mb-4 sm:mb-6 flex items-center">
+                <AlertTriangle className="h-6 sm:h-8 w-6 sm:w-8 mr-2 sm:mr-3 animate-bounce" />
                 Current State: Chaos
               </h3>
               
@@ -68,9 +68,9 @@ const WhatWeSolveSection = () => {
 
           {/* Right Side - Solution */}
           <div className="relative">
-            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-emerald-200">
-              <h3 className="text-2xl font-bold text-emerald-700 mb-6 flex items-center">
-                <CheckCircle className="h-8 w-8 mr-3 text-emerald-500" />
+            <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-emerald-200 mx-4 sm:mx-0">
+              <h3 className="text-xl sm:text-2xl font-bold text-emerald-700 mb-4 sm:mb-6 flex items-center">
+                <CheckCircle className="h-6 sm:h-8 w-6 sm:w-8 mr-2 sm:mr-3 text-emerald-500" />
                 Quantum Mosaic: Order
               </h3>
               
