@@ -61,17 +61,17 @@ const ComparisonTable = () => {
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
           <div className="grid grid-cols-3 gap-0">
             {/* Header */}
-            <div className="bg-slate-700/50 p-6 font-semibold text-slate-200 border-r border-slate-600">
-              <h3 className="text-lg">Feature</h3>
+            <div className="bg-slate-700/50 p-6 font-sans font-normal text-slate-200 border-r border-slate-600">
+              <h3 className="text-lg font-sans font-normal">Feature</h3>
             </div>
-            <div className="bg-red-900/20 p-6 font-semibold text-red-200 border-r border-slate-600 text-center">
-              <h3 className="text-lg flex items-center justify-center">
+            <div className="bg-red-900/20 p-6 font-sans font-normal text-red-200 border-r border-slate-600 text-center">
+              <h3 className="text-lg font-sans font-normal flex items-center justify-center">
                 <X className="h-5 w-5 mr-2" />
                 Legacy Systems
               </h3>
             </div>
-            <div className="bg-emerald-900/20 p-6 font-semibold text-emerald-200 text-center">
-              <h3 className="text-lg flex items-center justify-center">
+            <div className="bg-emerald-900/20 p-6 font-sans font-normal text-emerald-200 text-center">
+              <h3 className="text-lg font-sans font-normal flex items-center justify-center">
                 <Check className="h-5 w-5 mr-2" />
                 Quantum Mosaic
               </h3>
@@ -81,30 +81,30 @@ const ComparisonTable = () => {
             {comparisons.map((item, index) => (
               <React.Fragment key={index}>
                 <div 
-                  className="p-6 font-medium text-slate-200 border-r border-slate-600 border-t border-slate-700 bg-slate-800/30"
+                  className="p-6 font-sans font-normal text-slate-200 border-r border-slate-600 border-t border-slate-700 bg-slate-800/30"
                   onMouseEnter={() => setHoveredFeature(index)}
                   onMouseLeave={() => setHoveredFeature(null)}
                 >
                   {item.feature}
                 </div>
                 <div 
-                  className="p-6 text-slate-300 border-r border-slate-600 border-t border-slate-700 bg-red-900/10 text-center"
+                  className="p-6 font-sans font-normal text-slate-300 border-r border-slate-600 border-t border-slate-700 bg-red-900/10 text-center"
                   onMouseEnter={() => setHoveredFeature(index)}
                   onMouseLeave={() => setHoveredFeature(null)}
                 >
                   <div className="flex items-center justify-center space-x-2">
                     {getStatusIcon(item.legacy.status, false)}
-                    <span>{item.legacy.text}</span>
+                    <span className="font-sans font-normal">{item.legacy.text}</span>
                   </div>
                 </div>
                 <div 
-                  className="p-6 text-slate-300 border-t border-slate-700 bg-emerald-900/10 text-center transition-all duration-300"
+                  className="p-6 font-sans font-normal text-slate-300 border-t border-slate-700 bg-emerald-900/10 text-center transition-all duration-300"
                   onMouseEnter={() => setHoveredFeature(index)}
                   onMouseLeave={() => setHoveredFeature(null)}
                 >
                   <div className="flex items-center justify-center space-x-2">
                     {getStatusIcon(item.quantum.status, hoveredFeature === index)}
-                    <span className={hoveredFeature === index ? 'font-semibold' : ''}>{item.quantum.text}</span>
+                    <span className={`font-sans ${hoveredFeature === index ? 'font-normal' : 'font-normal'}`}>{item.quantum.text}</span>
                   </div>
                 </div>
               </React.Fragment>
