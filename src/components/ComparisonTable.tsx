@@ -47,33 +47,35 @@ const ComparisonTable = () => {
   };
 
   return (
-    <section className="py-16 bg-slate-900 text-white">
+    <section className="py-12 md:py-16 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Legacy Systems vs. Quantum Mosaic
           </h2>
-          <p className="text-xl text-slate-300">
+          <p className="text-lg md:text-xl text-slate-300">
             The future of execution governance is here
           </p>
         </div>
         
-        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
-          <div className="grid grid-cols-3 gap-0">
+        <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 shadow-2xl overflow-x-auto">
+          <div className="grid grid-cols-3 gap-0 min-w-full">{/* Desktop grid, mobile will scroll */}
             {/* Header */}
-            <div className="bg-slate-700/50 p-6 font-sans font-normal text-slate-200 border-r border-slate-600">
-              <h3 className="text-lg font-sans font-normal">Feature</h3>
+            <div className="bg-slate-700/50 p-4 md:p-6 font-sans font-normal text-slate-200 border-r border-slate-600 min-w-[120px]">
+              <h3 className="text-base md:text-lg font-sans font-normal">Feature</h3>
             </div>
-            <div className="bg-red-900/20 p-6 font-sans font-normal text-red-200 border-r border-slate-600 text-center">
-              <h3 className="text-lg font-sans font-normal flex items-center justify-center">
-                <X className="h-5 w-5 mr-2" />
-                Legacy Systems
+            <div className="bg-red-900/20 p-4 md:p-6 font-sans font-normal text-red-200 border-r border-slate-600 text-center min-w-[140px]">
+              <h3 className="text-base md:text-lg font-sans font-normal flex items-center justify-center">
+                <X className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+                <span className="hidden sm:inline">Legacy Systems</span>
+                <span className="sm:hidden">Legacy</span>
               </h3>
             </div>
-            <div className="bg-emerald-900/20 p-6 font-sans font-normal text-emerald-200 text-center">
-              <h3 className="text-lg font-sans font-normal flex items-center justify-center">
-                <Check className="h-5 w-5 mr-2" />
-                Quantum Mosaic
+            <div className="bg-emerald-900/20 p-4 md:p-6 font-sans font-normal text-emerald-200 text-center min-w-[140px]">
+              <h3 className="text-base md:text-lg font-sans font-normal flex items-center justify-center">
+                <Check className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+                <span className="hidden sm:inline">Quantum Mosaic</span>
+                <span className="sm:hidden">Quantum</span>
               </h3>
             </div>
             
@@ -81,30 +83,30 @@ const ComparisonTable = () => {
             {comparisons.map((item, index) => (
               <React.Fragment key={index}>
                 <div 
-                  className="p-6 font-sans font-normal text-slate-200 border-r border-slate-600 border-t border-slate-700 bg-slate-800/30"
+                  className="p-4 md:p-6 font-sans font-normal text-slate-200 border-r border-slate-600 border-t border-slate-700 bg-slate-800/30 min-w-[120px]"
                   onMouseEnter={() => setHoveredFeature(index)}
                   onMouseLeave={() => setHoveredFeature(null)}
                 >
-                  {item.feature}
+                  <span className="text-sm md:text-base">{item.feature}</span>
                 </div>
                 <div 
-                  className="p-6 font-sans font-normal text-slate-300 border-r border-slate-600 border-t border-slate-700 bg-red-900/10 text-center"
+                  className="p-4 md:p-6 font-sans font-normal text-slate-300 border-r border-slate-600 border-t border-slate-700 bg-red-900/10 text-center min-w-[140px]"
                   onMouseEnter={() => setHoveredFeature(index)}
                   onMouseLeave={() => setHoveredFeature(null)}
                 >
-                  <div className="flex items-center justify-center space-x-2">
+                  <div className="flex items-center justify-center space-x-1 md:space-x-2">
                     {getStatusIcon(item.legacy.status, false)}
-                    <span className="font-sans font-normal">{item.legacy.text}</span>
+                    <span className="font-sans font-normal text-xs md:text-sm">{item.legacy.text}</span>
                   </div>
                 </div>
                 <div 
-                  className="p-6 font-sans font-normal text-slate-300 border-t border-slate-700 bg-emerald-900/10 text-center transition-all duration-300"
+                  className="p-4 md:p-6 font-sans font-normal text-slate-300 border-t border-slate-700 bg-emerald-900/10 text-center transition-all duration-300 min-w-[140px]"
                   onMouseEnter={() => setHoveredFeature(index)}
                   onMouseLeave={() => setHoveredFeature(null)}
                 >
-                  <div className="flex items-center justify-center space-x-2">
+                  <div className="flex items-center justify-center space-x-1 md:space-x-2">
                     {getStatusIcon(item.quantum.status, hoveredFeature === index)}
-                    <span className={`font-sans ${hoveredFeature === index ? 'font-normal' : 'font-normal'}`}>{item.quantum.text}</span>
+                    <span className={`font-sans text-xs md:text-sm ${hoveredFeature === index ? 'font-normal' : 'font-normal'}`}>{item.quantum.text}</span>
                   </div>
                 </div>
               </React.Fragment>

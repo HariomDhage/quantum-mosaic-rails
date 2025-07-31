@@ -16,7 +16,7 @@ const WhoWeAreForSection = () => {
         </div>
         
         <div className="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center">
             <div>
               <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <p className="text-gray-700">Chased a missing approval</p>

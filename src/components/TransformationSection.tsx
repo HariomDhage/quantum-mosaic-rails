@@ -84,7 +84,7 @@ const TransformationSection = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                 {problemTiles.map((tile, index) => (
                   <div key={index} className="bg-white p-6 rounded-lg border-2 border-red-200 text-center">
                     <X className="h-8 w-8 text-red-500 mx-auto mb-3" />
@@ -132,7 +132,7 @@ const TransformationSection = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                 {solutionTiles.map((tile, index) => (
                   <div key={index} className="bg-white p-6 rounded-lg border-2 border-emerald-200 text-center">
                     <CheckCircle className="h-8 w-8 text-emerald-500 mx-auto mb-3" />

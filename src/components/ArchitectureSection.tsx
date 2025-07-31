@@ -4,6 +4,7 @@ import { Code, Shield, FileCheck, ArrowRight } from 'lucide-react';
 
 const ArchitectureSection = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const steps = [
     {
@@ -30,10 +31,18 @@ const ArchitectureSection = () => {
   ];
 
   useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
     }, 3000);
-    return () => clearInterval(interval);
+    
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   const getColorClasses = (color: string, isActive: boolean) => {
@@ -61,20 +70,20 @@ const ArchitectureSection = () => {
   };
 
   return (
-    <section className="py-20 bg-slate-900 text-white">
+    <section className="py-12 md:py-20 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
             Our Unique Architecture: Encode. Enforce. Audit.
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto font-sans font-normal">
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-sans font-normal">
             Three-layer architecture that transforms policy into executable governance
           </p>
         </div>
 
         {/* Futuristic Venn Diagram */}
-        <div className="relative max-w-6xl mx-auto mb-16">
-          <svg viewBox="0 0 800 400" className="w-full h-96">
+        <div className="relative max-w-6xl mx-auto mb-8 md:mb-16">
+          <svg viewBox="0 0 800 400" className="w-full h-48 md:h-96">
             {/* Background Grid */}
             <defs>
               <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -87,10 +96,11 @@ const ArchitectureSection = () => {
             {steps.map((step, index) => {
               const isActive = activeStep === index;
               const colorClasses = getColorClasses(step.color, isActive);
+              // Responsive positions - mobile stacked vertically, desktop side by side
               const positions = [
-                { cx: 200, cy: 200 }, // Encode
-                { cx: 400, cy: 150 }, // Enforce  
-                { cx: 600, cy: 200 }  // Audit
+                { cx: isMobile ? 400 : 200, cy: isMobile ? 100 : 200 }, // Encode
+                { cx: 400, cy: isMobile ? 200 : 150 }, // Enforce  
+                { cx: isMobile ? 400 : 600, cy: isMobile ? 300 : 200 }  // Audit
               ];
 
               return (
@@ -98,7 +108,7 @@ const ArchitectureSection = () => {
                   <circle
                     cx={positions[index].cx}
                     cy={positions[index].cy}
-                    r={isActive ? "85" : "75"}
+                    r={isActive ? (isMobile ? "60" : "85") : (isMobile ? "50" : "75")}
                     fill="none"
                     stroke={isActive ? `rgb(${step.color === 'blue' ? '59 130 246' : step.color === 'emerald' ? '16 185 129' : '245 158 11'})` : '#64748b'}
                     strokeWidth={isActive ? "3" : "2"}
@@ -111,7 +121,7 @@ const ArchitectureSection = () => {
                     x={positions[index].cx}
                     y={positions[index].cy}
                     textAnchor="middle"
-                    className={`text-lg font-sans font-normal fill-white transition-all duration-300 ${isActive ? 'scale-110' : ''}`}
+                    className={`text-sm md:text-lg font-sans font-normal fill-white transition-all duration-300 ${isActive ? 'scale-110' : ''}`}
                   >
                     {step.title}
                   </text>
@@ -126,30 +136,53 @@ const ArchitectureSection = () => {
               </marker>
             </defs>
             
-            {/* Policy → Enforcement */}
-            <path
-              d="M 285 200 Q 340 175 360 150"
-              fill="none"
-              stroke="#10b981"
-              strokeWidth="2"
-              markerEnd="url(#arrowhead)"
-              className={`transition-opacity duration-500 ${activeStep >= 1 ? 'opacity-100' : 'opacity-30'}`}
-            />
-            
-            {/* Enforcement → Proof */}
-            <path
-              d="M 485 175 Q 540 185 515 200"
-              fill="none"
-              stroke="#10b981"
-              strokeWidth="2"
-              markerEnd="url(#arrowhead)"
-              className={`transition-opacity duration-500 ${activeStep >= 2 ? 'opacity-100' : 'opacity-30'}`}
-            />
+            {/* Mobile: Vertical arrows, Desktop: Curved arrows */}
+            {isMobile ? (
+              <>
+                {/* Mobile Vertical Arrows */}
+                <path
+                  d="M 400 150 L 400 170"
+                  fill="none"
+                  stroke="#10b981"
+                  strokeWidth="2"
+                  markerEnd="url(#arrowhead)"
+                  className={`transition-opacity duration-500 ${activeStep >= 1 ? 'opacity-100' : 'opacity-30'}`}
+                />
+                <path
+                  d="M 400 250 L 400 270"
+                  fill="none"
+                  stroke="#10b981"
+                  strokeWidth="2"
+                  markerEnd="url(#arrowhead)"
+                  className={`transition-opacity duration-500 ${activeStep >= 2 ? 'opacity-100' : 'opacity-30'}`}
+                />
+              </>
+            ) : (
+              <>
+                {/* Desktop Curved Arrows */}
+                <path
+                  d="M 285 200 Q 340 175 360 150"
+                  fill="none"
+                  stroke="#10b981"
+                  strokeWidth="2"
+                  markerEnd="url(#arrowhead)"
+                  className={`transition-opacity duration-500 ${activeStep >= 1 ? 'opacity-100' : 'opacity-30'}`}
+                />
+                <path
+                  d="M 485 175 Q 540 185 515 200"
+                  fill="none"
+                  stroke="#10b981"
+                  strokeWidth="2"
+                  markerEnd="url(#arrowhead)"
+                  className={`transition-opacity duration-500 ${activeStep >= 2 ? 'opacity-100' : 'opacity-30'}`}
+                />
+              </>
+            )}
           </svg>
         </div>
 
         {/* Step Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {steps.map((step, index) => {
             const isActive = activeStep === index;
             const colorClasses = getColorClasses(step.color, isActive);
@@ -158,20 +191,20 @@ const ArchitectureSection = () => {
             return (
               <div
                 key={index}
-                className={`bg-slate-800 rounded-2xl p-8 border-2 transition-all duration-500 hover:scale-105 cursor-pointer ${
+                className={`bg-slate-800 rounded-2xl p-6 md:p-8 border-2 transition-all duration-500 hover:scale-105 cursor-pointer ${
                   isActive 
                     ? `${colorClasses.border} shadow-2xl ${colorClasses.shadow}` 
                     : 'border-slate-600 hover:border-slate-500'
                 }`}
                 onClick={() => setActiveStep(index)}
               >
-                <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-all duration-300 ${
+                <div className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4 md:mb-6 transition-all duration-300 ${
                   isActive ? colorClasses.bg : 'bg-slate-700'
                 }`}>
-                  <StepIcon className="h-8 w-8 text-white" />
+                  <StepIcon className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 
-                <h3 className={`text-2xl font-bold mb-2 transition-colors duration-300 ${
+                <h3 className={`text-xl md:text-2xl font-bold mb-2 transition-colors duration-300 ${
                   isActive ? colorClasses.text.replace('text-', 'text-') : 'text-white'
                 }`}>
                   {step.title}

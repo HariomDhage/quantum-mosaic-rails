@@ -12,7 +12,7 @@ const WhyNowSection = () => {
           </h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           <div className="text-center">
             <div className="flex justify-center mb-4">
               <Brain className="h-12 w-12 text-blue-600" />
