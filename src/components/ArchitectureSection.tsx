@@ -111,7 +111,7 @@ const ArchitectureSection = () => {
                     x={positions[index].cx}
                     y={positions[index].cy}
                     textAnchor="middle"
-                    className={`text-lg font-bold fill-white transition-all duration-300 ${isActive ? 'scale-110' : ''}`}
+                    className={`text-lg font-sans font-normal fill-white transition-all duration-300 ${isActive ? 'scale-110' : ''}`}
                   >
                     {step.title}
                   </text>
