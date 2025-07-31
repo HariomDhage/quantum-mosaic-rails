@@ -29,7 +29,7 @@ const Header = () => {
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <img 
-                  src="/images/quantum-mosaic-logo.png" 
+                  src="/lovable-uploads/b75fe8db-3bff-422e-9fb0-23c6bd4fa258.png" 
                   alt="Quantum Mosaic Logo" 
                   className="h-12 w-auto brightness-110 contrast-110"
                 />
