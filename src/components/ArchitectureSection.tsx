@@ -109,19 +109,21 @@ const ArchitectureSection = () => {
                   />
                   <text
                     x={positions[index].cx}
-                    y={positions[index].cy - 10}
+                    y={positions[index].cy - 15}
                     textAnchor="middle"
-                    className={`text-lg font-bold fill-white transition-all duration-300 ${isActive ? 'scale-110' : ''}`}
+                    className={`text-base font-bold fill-white transition-all duration-300 ${isActive ? 'scale-110' : ''}`}
                   >
                     {step.title}
                   </text>
                   <text
                     x={positions[index].cx}
-                    y={positions[index].cy + 10}
+                    y={positions[index].cy + 5}
                     textAnchor="middle"
-                    className="text-sm fill-slate-300"
+                    className="text-xs fill-slate-300"
+                    style={{ maxWidth: '120px' }}
                   >
-                    {step.subtitle.split(' ').slice(0, 2).join(' ')}
+                    <tspan x={positions[index].cx} dy="0">{step.subtitle.split(' ').slice(0, 2).join(' ')}</tspan>
+                    <tspan x={positions[index].cx} dy="12">{step.subtitle.split(' ').slice(2).join(' ')}</tspan>
                   </text>
                 </g>
               );
