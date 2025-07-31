@@ -122,7 +122,7 @@ const ArchitectureSection = () => {
                     className="text-xs fill-slate-300"
                   >
                     <tspan x={positions[index].cx} dy="0">{step.subtitle.split(' ').slice(0, 2).join(' ')}</tspan>
-                    <tspan x={positions[index].cx} dy="12">{step.subtitle.split(' ').slice(2).join(' ')}</tspan>
+                    <tspan x={positions[index].cx} dy="18">{step.subtitle.split(' ').slice(2).join(' ')}</tspan>
                   </text>
                 </g>
               );
