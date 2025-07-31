@@ -45,7 +45,7 @@ const AnimatedHeroSection = () => {
               </span>
             </h1>
             
-            <div className="space-y-6 text-base sm:text-lg md:text-xl text-blue-100 leading-relaxed mb-8">
+            <div className="space-y-6 text-base sm:text-lg md:text-xl text-blue-100 leading-relaxed mb-8 font-sans">
               <p>
                 Every institution makes plans. But few can guarantee they're followed — let alone enforced in real time.
               </p>
