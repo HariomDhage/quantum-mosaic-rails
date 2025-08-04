@@ -42,7 +42,7 @@ const FinalQuantumCTASection = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             {/* Headline */}
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent mb-8 leading-tight font-sora animate-scale-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-6 sm:mb-8 leading-tight font-sora animate-scale-in px-2">
               Your Constraints Aren't Limits—
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
@@ -51,56 +51,56 @@ const FinalQuantumCTASection = () => {
             </h2>
 
             {/* Subheading */}
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in px-4">
               Transform organizational constraints into competitive advantages. 
               Join the pioneers building the first autonomous enterprises.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-bounce-in">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 animate-bounce-in px-4">
               <Button
                 onClick={handleJoinAccess}
-                className="group bg-gradient-to-r from-primary to-secondary hover:shadow-xl hover:shadow-primary/30 text-white px-10 py-5 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105"
+                className="group bg-gradient-to-r from-primary to-secondary hover:shadow-xl hover:shadow-primary/30 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-semibold text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               >
-                <Brain className="mr-3 h-6 w-6 group-hover:rotate-12 transition-transform" />
+                <Brain className="mr-2 sm:mr-3 h-5 sm:h-6 w-5 sm:w-6 group-hover:rotate-12 transition-transform" />
                 🧠 Join Early Access
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 sm:ml-3 h-5 sm:h-6 w-5 sm:w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
               
               <Button
                 onClick={handleSeeInAction}
                 variant="outline"
-                className="group border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-5 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105"
+                className="group border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-semibold text-base sm:text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               >
-                <Satellite className="mr-3 h-6 w-6 group-hover:rotate-12 transition-transform" />
+                <Satellite className="mr-2 sm:mr-3 h-5 sm:h-6 w-5 sm:w-6 group-hover:rotate-12 transition-transform" />
                 🛰 See It in Action
               </Button>
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
               <div className="text-center animate-slide-in-left">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">∞</span>
+                <div className="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-lg sm:text-2xl font-bold text-white">∞</span>
                 </div>
-                <h3 className="font-semibold text-accent mb-2 font-sora">Exponential Scale</h3>
-                <p className="text-sm text-muted-foreground">Linear cost, exponential capability</p>
+                <h3 className="font-semibold text-accent mb-2 font-sora text-sm sm:text-base">Exponential Scale</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">Linear cost, exponential capability</p>
               </div>
 
               <div className="text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">⚡</span>
+                <div className="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-lg sm:text-2xl font-bold text-white">⚡</span>
                 </div>
-                <h3 className="font-semibold text-accent mb-2 font-sora">Instant Deployment</h3>
-                <p className="text-sm text-muted-foreground">Ready-to-use AI infrastructure</p>
+                <h3 className="font-semibold text-accent mb-2 font-sora text-sm sm:text-base">Instant Deployment</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">Ready-to-use AI infrastructure</p>
               </div>
 
               <div className="text-center animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">🛡️</span>
+                <div className="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <span className="text-lg sm:text-2xl font-bold text-white">🛡️</span>
                 </div>
-                <h3 className="font-semibold text-accent mb-2 font-sora">Full Compliance</h3>
-                <p className="text-sm text-muted-foreground">Built-in audit trails and governance</p>
+                <h3 className="font-semibold text-accent mb-2 font-sora text-sm sm:text-base">Full Compliance</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">Built-in audit trails and governance</p>
               </div>
             </div>
           </div>

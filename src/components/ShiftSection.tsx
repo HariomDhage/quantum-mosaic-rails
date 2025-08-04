@@ -5,18 +5,18 @@ const ShiftSection = () => {
   const [activeModel, setActiveModel] = useState<'old' | 'new'>('old');
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-16 sm:py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-accent mb-6 font-sora">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-4 sm:mb-6 font-sora px-2">
             ⚖️ From Human Bandwidth to Encoded Intelligence
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             The fundamental shift from scaling people to scaling intelligence
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Old Model */}
           <div 
             className={`group cursor-pointer transition-all duration-500 ${
@@ -24,10 +24,10 @@ const ShiftSection = () => {
             }`}
             onClick={() => setActiveModel('old')}
           >
-            <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-center mb-6">
-                <Users className="h-12 w-12 text-red-500 mr-4" />
-                <h3 className="text-2xl font-bold text-red-700 font-sora">Old Model</h3>
+            <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4 sm:mb-6">
+                <Users className="h-8 sm:h-12 w-8 sm:w-12 text-red-500 mr-3 sm:mr-4" />
+                <h3 className="text-xl sm:text-2xl font-bold text-red-700 font-sora">Old Model</h3>
               </div>
               
               <div className="space-y-4">
