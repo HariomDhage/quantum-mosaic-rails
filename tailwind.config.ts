@@ -20,8 +20,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'Sora', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-				display: ['Sora', 'Inter', 'sans-serif'],
+				sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+			},
+			fontWeight: {
+				thin: '100',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -75,51 +77,25 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: '0' },
-					to: { height: 'var(--radix-accordion-content-height)' }
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
 				},
 				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: '0' }
-				},
-				'fade-in': {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
-					'100%': { opacity: '1', transform: 'translateY(0)' }
-				},
-				'slide-in-left': {
-					'0%': { opacity: '0', transform: 'translateX(-30px)' },
-					'100%': { opacity: '1', transform: 'translateX(0)' }
-				},
-				'slide-in-right': {
-					'0%': { opacity: '0', transform: 'translateX(30px)' },
-					'100%': { opacity: '1', transform: 'translateX(0)' }
-				},
-				'scale-in': {
-					'0%': { opacity: '0', transform: 'scale(0.95)' },
-					'100%': { opacity: '1', transform: 'scale(1)' }
-				},
-				'gradient-shift': {
-					'0%, 100%': { backgroundPosition: '0% 50%' },
-					'50%': { backgroundPosition: '100% 50%' }
-				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' }
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in-left': 'slide-in-left 0.6s ease-out',
-				'slide-in-right': 'slide-in-right 0.6s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out',
-				'gradient-shift': 'gradient-shift 3s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite'
-			},
-			backgroundImage: {
-				'gradient-quantum': 'linear-gradient(135deg, hsl(270 100% 50%), hsl(190 100% 50%))',
-				'gradient-card': 'linear-gradient(180deg, hsl(225 40% 12%), hsl(225 47% 9%))'
+				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
 	},
