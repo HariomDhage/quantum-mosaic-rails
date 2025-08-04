@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import QuantumHeader from '@/components/QuantumHeader';
+import QuantumFooter from '@/components/QuantumFooter';
 import ContactForm from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
-import { Code, Eye, Shield } from 'lucide-react';
+import { Code, Eye, Shield, Brain, Target, Rocket } from 'lucide-react';
 
 const About = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -49,97 +49,161 @@ const About = () => {
 
   return (
     <>
-      <div className="min-h-screen">
-        <Header />
+      <div className="min-h-screen bg-background">
+        <QuantumHeader />
         
-        <main>
-          {/* Mission Section */}
-          <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-5xl font-bold mb-6">
-                  Building the World's First Execution Operating System (XOS)
+        <main className="pt-16">
+          {/* Hero Section */}
+          <section className="py-24 bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-secondary/30 to-primary/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+            </div>
+            
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="text-center max-w-5xl mx-auto">
+                <div className="mb-8 animate-scale-in">
+                  <span className="inline-block bg-muted text-accent px-6 py-3 rounded-full text-sm font-medium border border-border">
+                    🧠 About Quantum Mosaic™
+                  </span>
+                </div>
+                
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 leading-tight font-sora animate-fade-in">
+                  Building the World's First
+                  <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                    Execution Operating System
+                  </span>
                 </h1>
-                <p className="text-xl text-blue-100 leading-relaxed">
-                  The private capital market is one of the most powerful engines for growth in the world, yet it runs on invisible friction. Critical decisions are managed by fragmented emails, static PDFs, and human memory, creating enormous operational and compliance risk. At Quantum Mosaic, our mission is to replace that friction with certainty. We are building the programmable infrastructure that allows institutions to codify their policies and enforce them automatically. We believe that when execution is guaranteed, capital can move with confidence and speed.
+                
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed animate-bounce-in">
+                  The private capital market is one of the most powerful engines for growth in the world, yet it runs on invisible friction. At Quantum Mosaic, our mission is to replace that friction with <span className="text-accent font-semibold">programmable certainty</span>.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Story Section */}
-          <section className="py-16 bg-white">
+          {/* Mission Deep Dive */}
+          <section className="py-20 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
-                  From Manual Chaos to Programmable Trust
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Quantum Mosaic was born from a simple observation: in a world of increasingly complex financial rules, the systems designed to enforce them were stuck in the past. We saw brilliant investment teams spending their days chasing approvals and manually verifying compliance. We started by tackling the most universal pain point—drowning in off-thesis pitch decks. Instead of just digitizing paperwork, we decided to program discipline, starting at the very top of the investment funnel.
-                </p>
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="animate-slide-in-left">
+                  <h2 className="text-3xl sm:text-4xl font-bold text-accent mb-8 font-sora">
+                    From Manual Chaos to Programmable Trust
+                  </h2>
+                  <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                    <p>
+                      Critical decisions are managed by fragmented emails, static PDFs, and human memory, creating enormous operational and compliance risk.
+                    </p>
+                    <p>
+                      We are building the <span className="text-accent font-semibold">programmable infrastructure</span> that allows institutions to codify their policies and enforce them automatically.
+                    </p>
+                    <p className="text-accent font-medium">
+                      When execution is guaranteed, capital can move with confidence and speed.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="animate-slide-in-right">
+                  <div className="bg-muted/50 rounded-2xl p-8 border border-border">
+                    <h3 className="text-xl font-semibold text-accent mb-6 font-sora">Our Vision</h3>
+                    <div className="space-y-4">
+                      {[
+                        { icon: Brain, text: "Autonomous decision networks" },
+                        { icon: Shield, text: "Guaranteed compliance at scale" },
+                        { icon: Target, text: "Real-time policy enforcement" },
+                        { icon: Rocket, text: "Exponential institutional growth" }
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <item.icon className="h-4 w-4 text-white" />
+                          </div>
+                          <span className="text-muted-foreground">{item.text}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Team Section */}
-          <section className="py-16 bg-gray-50">
+          <section className="py-20 bg-muted/30">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                  The Team Building the Execution OS
+              <div className="text-center mb-16">
+                <h2 className="text-3xl sm:text-4xl font-bold text-accent mb-6 font-sora">
+                  The Team Building the Future
                 </h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Pioneers in autonomous intelligence, enterprise architecture, and institutional finance
+                </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
                 {teamMembers.map((member, index) => (
-                  <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                    />
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                    <p className="text-blue-600 font-semibold mb-4">{member.role}</p>
-                    <p className="text-gray-600">{member.description}</p>
+                  <div key={index} className="group bg-background p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl hover:border-primary/50 transition-all duration-300 animate-bounce-in" style={{ animationDelay: `${index * 0.2}s` }}>
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 sm:space-x-6">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-24 h-24 rounded-full object-cover border-4 border-muted group-hover:border-primary transition-colors duration-300"
+                      />
+                      <div className="text-center sm:text-left flex-1">
+                        <h3 className="text-2xl font-bold text-accent mb-2 font-sora group-hover:text-primary transition-colors">{member.name}</h3>
+                        <p className="text-primary font-semibold mb-4 text-lg">{member.role}</p>
+                        <p className="text-muted-foreground leading-relaxed">{member.description}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
 
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-gray-900">Guided by Industry Pioneers</h3>
-              </div>
-              
-              <div className="max-w-4xl mx-auto text-center">
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Quantum Mosaic is built with the strategic guidance of a world-class advisory board — including leaders from institutional investing, AI infrastructure, regulatory compliance, enterprise software, and private capital markets.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Our advisors bring deep domain expertise and real-world insight to help us navigate complexity, anticipate market needs, and build execution infrastructure that's not just visionary — but operationally sound and trusted by the industry.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  From CIOs of multi-billion-dollar portfolios to AI architects and regulatory veterans — our advisory circle ensures QM delivers at the intersection of trust, precision, and scale.
-                </p>
+              <div className="bg-background rounded-2xl p-8 shadow-lg border border-border">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-accent font-sora">Guided by Industry Pioneers</h3>
+                </div>
+                
+                <div className="max-w-4xl mx-auto space-y-6 text-center">
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Quantum Mosaic is built with the strategic guidance of a world-class advisory board — including leaders from <span className="text-accent font-semibold">institutional investing</span>, <span className="text-accent font-semibold">AI infrastructure</span>, <span className="text-accent font-semibold">regulatory compliance</span>, and <span className="text-accent font-semibold">private capital markets</span>.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Our advisors bring deep domain expertise and real-world insight to help us navigate complexity, anticipate market needs, and build execution infrastructure that's not just visionary — but <span className="text-primary font-semibold">operationally sound and trusted by the industry</span>.
+                  </p>
+                  <div className="inline-flex items-center space-x-4 bg-muted rounded-full px-8 py-4 mt-6">
+                    <span className="text-muted-foreground">From CIOs of multi-billion-dollar portfolios</span>
+                    <span className="text-primary">→</span>
+                    <span className="text-accent font-semibold">To AI architects and regulatory veterans</span>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Philosophy Section */}
-          <section className="py-16 bg-white">
+          <section className="py-20 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl sm:text-4xl font-bold text-accent mb-6 font-sora">
                   How We Think
                 </h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Our core principles that guide every decision and line of code
+                </p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {philosophies.map((philosophy, index) => (
-                  <div key={index} className="text-center">
-                    <div className="flex justify-center mb-4">
-                      <philosophy.icon className="h-12 w-12 text-blue-600" />
+                  <div key={index} className="group bg-card rounded-2xl p-8 shadow-lg border border-border hover:shadow-xl hover:border-primary/50 transition-all duration-300 animate-bounce-in" style={{ animationDelay: `${index * 0.2}s` }}>
+                    <div className="flex justify-center mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <philosophy.icon className="h-8 w-8 text-white" />
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-gray-900">{philosophy.title}</h3>
-                    <p className="text-gray-600">{philosophy.description}</p>
+                    <h3 className="text-xl font-bold mb-4 text-accent text-center font-sora group-hover:text-primary transition-colors">{philosophy.title}</h3>
+                    <p className="text-muted-foreground text-center leading-relaxed">{philosophy.description}</p>
                   </div>
                 ))}
               </div>
@@ -147,26 +211,37 @@ const About = () => {
           </section>
 
           {/* Final CTA */}
-          <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h2 className="text-4xl font-bold mb-6">
-                Ready to Build the Future?
-              </h2>
-              <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-                Join us in creating the infrastructure that will power the next generation of private capital markets.
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-white text-blue-900 hover:bg-gray-100 text-lg px-8 py-4"
-                onClick={handleJoinProgram}
-              >
-                Join the XOS Pioneer Program
-              </Button>
+          <section className="py-24 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 opacity-30">
+              <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+            </div>
+            
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+              <div className="animate-scale-in">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-accent font-sora">
+                  Ready to Build the Future?
+                </h2>
+                <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-muted-foreground leading-relaxed">
+                  Join us in creating the infrastructure that will power the next generation of 
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-semibold"> autonomous enterprises</span>.
+                </p>
+                
+                <Button 
+                  size="lg" 
+                  className="group bg-gradient-to-r from-primary to-secondary hover:shadow-xl hover:shadow-primary/30 text-white px-10 py-5 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 animate-pulse-glow"
+                  onClick={handleJoinProgram}
+                >
+                  🚀 Join the XOS Pioneer Program
+                  <div className="ml-3 group-hover:translate-x-1 transition-transform">→</div>
+                </Button>
+              </div>
             </div>
           </section>
         </main>
         
-        <Footer />
+        <QuantumFooter />
       </div>
       
       <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
