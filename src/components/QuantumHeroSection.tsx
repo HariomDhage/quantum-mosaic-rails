@@ -70,7 +70,7 @@ const QuantumHeroSection = () => {
             </div>
             
             {/* Typewriter Headline */}
-            <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight font-sora">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight font-sora">
               <span className="text-foreground">Quantum Mosaic™ —</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary min-h-[1.2em] inline-block">
@@ -80,7 +80,7 @@ const QuantumHeroSection = () => {
             </h1>
             
             {/* Subheading */}
-            <div className="space-y-4 text-xl sm:text-2xl md:text-3xl text-muted-foreground leading-relaxed mb-16 font-inter animate-fade-in">
+            <div className="space-y-4 text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed mb-12 font-inter animate-fade-in">
               <p className="font-medium">
                 Scale judgment, not headcount. Achieve exponential growth at linear cost.
               </p>
@@ -90,7 +90,7 @@ const QuantumHeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center animate-bounce-in">
               <Button
                 onClick={handleDemo}
-                className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/25 text-white px-10 py-6 rounded-xl font-semibold text-xl transition-all duration-300 animate-pulse-glow group"
+                className="bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:shadow-primary/25 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 animate-pulse-glow group"
               >
                 🚀 Request a Demo
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -99,7 +99,7 @@ const QuantumHeroSection = () => {
               <Button
                 onClick={handleVideoDemo}
                 variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-6 rounded-xl font-semibold text-xl transition-all duration-300 group"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 group"
               >
                 <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 📅 Schedule a Discovery Call
