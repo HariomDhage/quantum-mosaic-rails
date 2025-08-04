@@ -1,21 +1,43 @@
 
 import React from 'react';
-import QuantumHeroSection from '@/components/QuantumHeroSection';
-import ProblemSection from '@/components/ProblemSection';
-import ShiftSection from '@/components/ShiftSection';
-import AIFactorySection from '@/components/AIFactorySection';
-import AutonomousIntelligenceSection from '@/components/AutonomousIntelligenceSection';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import AnimatedHeroSection from '@/components/AnimatedHeroSection';
+import TransformationSection from '@/components/TransformationSection';
+import AutonomousInstitutionsSection from '@/components/AutonomousInstitutionsSection';
+import BLUFStudioSection from '@/components/BLUFStudioSection';
+import WhatWeSolveSection from '@/components/WhatWeSolveSection';
+import ArchitectureSection from '@/components/ArchitectureSection';
+import WhyNowSection from '@/components/WhyNowSection';
+import ComparisonTable from '@/components/ComparisonTable';
+import SolutionSection from '@/components/SolutionSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
+import UseCasesSection from '@/components/UseCasesSection';
+import DifferentiationSection from '@/components/DifferentiationSection';
+import WhoWeAreForSection from '@/components/WhoWeAreForSection';
+import FinalCTASection from '@/components/FinalCTASection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
+      <Header />
       <main>
-        <QuantumHeroSection />
-        <ProblemSection />
-        <ShiftSection />
-        <AIFactorySection />
-        <AutonomousIntelligenceSection />
+        <AnimatedHeroSection />
+        <TransformationSection />
+        <AutonomousInstitutionsSection />
+        <BLUFStudioSection />
+        <WhatWeSolveSection />
+        <ArchitectureSection />
+        <WhyNowSection />
+        <ComparisonTable />
+        <SolutionSection />
+        <HowItWorksSection />
+        <UseCasesSection />
+        <DifferentiationSection />
+        <WhoWeAreForSection />
+        <FinalCTASection />
       </main>
+      <Footer />
     </div>
   );
 };
