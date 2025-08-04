@@ -10,7 +10,7 @@ const QuantumFooter = () => {
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/3c3355b9-8ce8-47af-a8bc-171c7293ec43.png"
+              src="/lovable-uploads/1fcfa24b-386a-4344-b39d-ddf6814c3981.png"
               alt="Quantum Mosaic™"
               className="h-8 w-auto"
             />

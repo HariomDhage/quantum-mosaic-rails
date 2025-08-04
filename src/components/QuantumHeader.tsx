@@ -19,7 +19,7 @@ const QuantumHeader = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img 
-              src="/lovable-uploads/3c3355b9-8ce8-47af-a8bc-171c7293ec43.png"
+              src="/lovable-uploads/1fcfa24b-386a-4344-b39d-ddf6814c3981.png"
               alt="Quantum Mosaic™"
               className="h-8 sm:h-10 w-auto group-hover:scale-105 transition-transform duration-300"
             />
