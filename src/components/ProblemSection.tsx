@@ -93,14 +93,14 @@ const ProblemSection = () => {
               className={`text-center transition-all duration-1000 delay-${index * 300} ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}
             >
               <div className="relative mb-8">
-                {/* Glowing circle background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-xl"></div>
-                <div className="relative bg-card border border-primary/30 rounded-full w-32 h-32 mx-auto flex items-center justify-center mb-6">
+                {/* Subtle background */}
+                <div className="absolute inset-0 bg-card rounded-full blur-sm opacity-50"></div>
+                <div className="relative bg-card border border-border rounded-full w-32 h-32 mx-auto flex items-center justify-center mb-6">
                   <problem.icon className={`h-12 w-12 ${problem.color}`} />
                 </div>
               </div>
               
-              {/* Animated Counter */}
+              {/* Counter */}
               <div className="mb-4">
                 <span className={`text-6xl md:text-7xl font-bold ${problem.color} font-sora`}>
                   {problem.percentage}
@@ -112,28 +112,27 @@ const ProblemSection = () => {
                 {problem.label}
               </p>
 
-              {/* Circuit board animation effect */}
+              {/* Subtle indicator line */}
               <div className="mt-8 relative">
-                <div className="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent animate-pulse"></div>
-                <div className="absolute left-1/2 top-0 w-2 h-2 bg-primary rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-glow-pulse"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+                <div className="absolute left-1/2 top-0 w-2 h-2 bg-primary/60 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-professional-pulse"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Decision Bottlenecks Visualization */}
         <div className={`mt-20 text-center transition-all duration-1000 delay-1000 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-          <div className="bg-card border border-primary/20 rounded-2xl p-8 backdrop-blur-sm">
+          <div className="bg-card border border-border rounded-2xl p-8 backdrop-blur-sm">
             <h3 className="text-2xl font-bold text-foreground mb-6 font-sora">Decision Bottlenecks in Action</h3>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               {['Strategy', 'Approval', 'Execution'].map((step, index) => (
                 <div key={step} className="flex items-center">
-                  <div className="bg-muted text-muted-foreground px-4 py-2 rounded-lg font-semibold">
+                  <div className="bg-muted text-muted-foreground px-4 py-2 rounded-lg font-medium">
                     {step}
                   </div>
                   {index < 2 && (
-                    <div className="hidden md:block w-16 h-px bg-gradient-to-r from-red-500/50 to-red-500/20 mx-4 relative">
-                      <div className="absolute right-0 top-0 w-2 h-2 bg-red-500 rounded-full transform -translate-y-1/2 animate-bounce-gentle"></div>
+                    <div className="hidden md:block w-16 h-px bg-gradient-to-r from-red-500/30 to-red-500/10 mx-4 relative">
+                      <div className="absolute right-0 top-0 w-2 h-2 bg-red-400 rounded-full transform -translate-y-1/2 animate-smooth-bounce"></div>
                     </div>
                   )}
                 </div>
