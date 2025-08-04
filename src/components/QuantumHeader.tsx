@@ -18,14 +18,11 @@ const QuantumHeader = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-lg">QM</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-xl font-bold text-accent font-sora group-hover:text-primary transition-colors">
-                Quantum Mosaic™
-              </span>
-            </div>
+            <img 
+              src="/lovable-uploads/3c3355b9-8ce8-47af-a8bc-171c7293ec43.png"
+              alt="Quantum Mosaic™"
+              className="h-8 sm:h-10 w-auto group-hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}

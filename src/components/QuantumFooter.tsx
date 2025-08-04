@@ -9,13 +9,12 @@ const QuantumFooter = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">QM</span>
-            </div>
-            <div>
-              <div className="text-lg font-bold text-accent font-sora">
-                Quantum Mosaic™
-              </div>
+            <img 
+              src="/lovable-uploads/3c3355b9-8ce8-47af-a8bc-171c7293ec43.png"
+              alt="Quantum Mosaic™"
+              className="h-8 w-auto"
+            />
+            <div className="hidden sm:block">
               <div className="text-sm text-muted-foreground">
                 The AWS for Enterprise AI Factories
               </div>
