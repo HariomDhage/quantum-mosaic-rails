@@ -4,7 +4,7 @@ import QuantumFooter from '@/components/QuantumFooter';
 import ContactForm from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
 import { Code, Eye, Shield, Brain, Target, Rocket } from 'lucide-react';
-
+import SEO from '@/components/SEO';
 const About = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
@@ -49,6 +49,11 @@ const About = () => {
 
   return (
     <>
+      <SEO 
+        title="About Quantum Mosaic | Mission, Team, Approach"
+        description="Our mission: governed, self‑improving decisions for enterprises. Meet the team and the principles behind Corridors & Rails."
+        canonical="https://www.quantummosaic.com/about" 
+      />
       <div className="min-h-screen bg-background">
         <QuantumHeader />
         

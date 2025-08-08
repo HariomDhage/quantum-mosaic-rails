@@ -2,10 +2,15 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
+import SEO from '@/components/SEO';
 const Privacy = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Quantum Mosaic Privacy Policy"
+        description="How we collect, use, and protect your data, including encryption, access controls, and audit logging practices."
+        canonical="https://www.quantummosaic.com/privacy" 
+      />
       <Header />
       
       <main className="py-16">

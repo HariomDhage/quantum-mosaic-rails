@@ -2,12 +2,16 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
+import SEO from '@/components/SEO';
 const Terms = () => {
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Quantum Mosaic Terms of Service"
+        description="Terms governing your use of Quantum Mosaic’s platform, services, and governed execution capabilities."
+        canonical="https://www.quantummosaic.com/terms" 
+      />
       <Header />
-      
       <main className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
