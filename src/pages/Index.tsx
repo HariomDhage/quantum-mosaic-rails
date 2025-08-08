@@ -5,7 +5,7 @@ import QuantumFooter from '@/components/QuantumFooter';
 import QuantumHeroSection from '@/components/QuantumHeroSection';
 import ProblemSection from '@/components/ProblemSection';
 import ShiftSection from '@/components/ShiftSection';
-import AIFactorySection from '@/components/AIFactorySection';
+
 import AutonomousIntelligenceSection from '@/components/AutonomousIntelligenceSection';
 import AutonomiaStackSection from '@/components/AutonomiaStackSection';
 import MVPCapabilitiesSection from '@/components/MVPCapabilitiesSection';
@@ -22,7 +22,7 @@ const Index = () => {
         <ProblemSection />
         <ShiftSection />
         <ParadigmShiftsSection />
-        <AIFactorySection />
+        
         <AutonomousIntelligenceSection />
         <AutonomiaStackSection />
         <MVPCapabilitiesSection />
