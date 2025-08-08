@@ -31,12 +31,13 @@ const Index = () => {
         <ShiftSection />
         <ParadigmShiftsSection />
         <ExpertiseSystemSection />
-        <FAQSection />
+        
         <AutonomousIntelligenceSection />
         <AutonomiaStackSection />
         <MVPCapabilitiesSection />
         <RoadmapSection />
         <FinalQuantumCTASection />
+        <FAQSection />
       </main>
       <QuantumFooter />
     </div>
