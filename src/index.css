@@ -126,3 +126,11 @@
     line-height: 1.6;
   }
 }
+
+/* Component-level utilities for 3D flip and glow (kept minimal, using design tokens) */
+@layer components {
+  .qm-hover-glow {
+    box-shadow: 0 10px 30px -10px hsl(var(--primary) / 0.35);
+  }
+}
+

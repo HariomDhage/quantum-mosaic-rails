@@ -11,6 +11,7 @@ import AutonomiaStackSection from '@/components/AutonomiaStackSection';
 import MVPCapabilitiesSection from '@/components/MVPCapabilitiesSection';
 import RoadmapSection from '@/components/RoadmapSection';
 import FinalQuantumCTASection from '@/components/FinalQuantumCTASection';
+import ParadigmShiftsSection from '@/components/ParadigmShiftsSection';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <QuantumHeroSection />
         <ProblemSection />
         <ShiftSection />
+        <ParadigmShiftsSection />
         <AIFactorySection />
         <AutonomousIntelligenceSection />
         <AutonomiaStackSection />
