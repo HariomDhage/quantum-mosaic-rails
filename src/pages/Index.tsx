@@ -1,18 +1,12 @@
-
 import React from 'react';
 import QuantumHeader from '@/components/QuantumHeader';
 import QuantumFooter from '@/components/QuantumFooter';
-import ExecutiveHeroSection from '@/components/ExecutiveHeroSection';
-import TransformationOfferSection from '@/components/TransformationOfferSection';
-import ProofUrgencySection from '@/components/ProofUrgencySection';
-import MentalModelShiftsSection from '@/components/MentalModelShiftsSection';
-import CredibilitySocialProofSection from '@/components/CredibilitySocialProofSection';
-import WhoWeServeBestSection from '@/components/WhoWeServeBestSection';
-import ProofPointsSection from '@/components/ProofPointsSection';
-import HowItWorksQuantumSection from '@/components/HowItWorksQuantumSection';
-import WhyItMattersSection from '@/components/WhyItMattersSection';
-import FinalExecutiveCTASection from '@/components/FinalExecutiveCTASection';
-import FAQSection from '@/components/FAQSection';
+import ExecutiveHero from '@/components/ExecutiveHero';
+import ValueBlocksSection from '@/components/ValueBlocksSection';
+import ProofCaseStudies from '@/components/ProofCaseStudies';
+import HowItWorksSteps from '@/components/HowItWorksSteps';
+import JudgmentCorridorsComparison from '@/components/JudgmentCorridorsComparison';
+import FinalExecutiveCTA from '@/components/FinalExecutiveCTA';
 import SEO from '@/components/SEO';
 
 const Index = () => {
@@ -20,22 +14,17 @@ const Index = () => {
     <div className="min-h-screen">
       <QuantumHeader />
       <SEO 
-        title="Scale Judgment. Multiply Value. Transform Growth | Quantum Mosaic" 
-        description="Turn your best expertise into decision-ready intelligence and infinitely repeatable execution. Book a demo to see how leaders scale judgment without scaling costs." 
+        title="Multiply Your Best Decisions - Quantum Mosaic" 
+        description="Scale your judgment. Defend your edge. Turn your best expertise into infinitely repeatable execution." 
         canonical="https://www.quantummosaic.com/" 
       />
       <main className="pt-16">
-        <ExecutiveHeroSection />
-        <TransformationOfferSection />
-        <ProofUrgencySection />
-        <MentalModelShiftsSection />
-        <CredibilitySocialProofSection />
-        <WhoWeServeBestSection />
-        <ProofPointsSection />
-        <HowItWorksQuantumSection />
-        <WhyItMattersSection />
-        <FinalExecutiveCTASection />
-        <FAQSection />
+        <ExecutiveHero />
+        <ValueBlocksSection />
+        <ProofCaseStudies />
+        <HowItWorksSteps />
+        <JudgmentCorridorsComparison />
+        <FinalExecutiveCTA />
       </main>
       <QuantumFooter />
     </div>
