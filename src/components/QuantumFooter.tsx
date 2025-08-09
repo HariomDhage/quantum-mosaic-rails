@@ -70,7 +70,7 @@ const QuantumFooter = () => {
             Built with precision by <span className="text-primary font-medium">Quantum Mosaic™</span>
           </p>
           <p className="text-xs text-muted-foreground mt-1 sm:mt-2">
-            © 2024 Quantum Mosaic. All rights reserved.
+            © 2025 Quantum Mosaic. All rights reserved.
           </p>
         </div>
       </div>
