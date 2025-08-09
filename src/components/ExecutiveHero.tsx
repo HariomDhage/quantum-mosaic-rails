@@ -114,15 +114,6 @@ const ExecutiveHero = () => {
                 Book a Pilot Call
                 <ChevronRight className="ml-3 h-7 w-7 group-hover:translate-x-2 transition-transform" />
               </Button>
-              
-              <Button
-                onClick={handleROI}
-                variant="outline"
-                size="lg"
-                className="border-3 border-blue-400 bg-blue-600/20 text-blue-200 hover:bg-blue-600/40 hover:border-blue-300 px-12 py-6 rounded-xl font-bold text-2xl transition-all duration-300 hover:shadow-xl"
-              >
-                Estimate Your ROI Instantly
-              </Button>
             </div>
           </div>
         </div>
