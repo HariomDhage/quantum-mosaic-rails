@@ -46,11 +46,11 @@ const QuantumFooter = () => {
           {/* Contact and Social */}
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
             <a
-              href="mailto:hello@quantummosaic.com"
+              href="mailto:deepak@quantummosaic.com"
               className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-200 text-sm sm:text-base"
             >
               <Mail className="h-4 sm:h-5 w-4 sm:w-5" />
-              <span className="hidden sm:inline">hello@quantummosaic.com</span>
+              <span className="hidden sm:inline">deepak@quantummosaic.com</span>
               <span className="sm:hidden">Contact</span>
             </a>
             <a
