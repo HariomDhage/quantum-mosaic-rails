@@ -84,9 +84,9 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>Join the XOS Pioneer Program</DialogTitle>
+          <DialogTitle>Start Your 90-Day Value Multiplier Pilot </DialogTitle>
           <DialogDescription>
-            Be among the first firms to enforce institutional logic as code. Choose how you'd like to connect with us.
+           See how your best judgment performs at scale risk-free.
           </DialogDescription>
         </DialogHeader>
         
@@ -181,7 +181,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="message">Tell us about your execution challenges *</Label>
+            <Label htmlFor="message">Where Could Your Best Judgment Take You? *</Label>
             <Textarea
               id="message"
               name="message"
