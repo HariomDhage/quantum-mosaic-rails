@@ -58,13 +58,13 @@ const Header = () => {
                 className="bg-blue-600 hover:bg-blue-700 hidden sm:block"
                 onClick={handleJoinProgram}
               >
-                Join the XOS Pioneer Program
+                Book a Live Demo
               </Button>
               <Button 
                 className="bg-blue-600 hover:bg-blue-700 sm:hidden"
                 onClick={handleJoinProgram}
               >
-                Join XOS
+                Book Demo
               </Button>
               
               {/* Mobile menu button */}
