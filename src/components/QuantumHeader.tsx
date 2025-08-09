@@ -7,7 +7,6 @@ const QuantumHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'About', href: '/about' },
     { name: 'Privacy', href: '/privacy' },
     { name: 'Terms', href: '/terms' }
   ];
