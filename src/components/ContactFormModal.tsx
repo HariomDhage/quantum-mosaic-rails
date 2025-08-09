@@ -65,7 +65,7 @@ ${formData.challenges}
             Start Your 90-Day Value Multiplier Pilot
           </DialogTitle>
           <p className="text-center text-muted-foreground">
-            Be among the first firms to enforce institutional logic as code. Choose how you'd like to connect with us.
+            See how your best judgment performs at scale risk-free.
           </p>
         </DialogHeader>
 
