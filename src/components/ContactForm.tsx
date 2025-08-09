@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -188,19 +187,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               value={formData.message}
               onChange={handleChange}
               required
-              placeholder="Let’s explore how to scale it without scaling headcount."
-              rows={4}
-            />
-          </div>
-          <div className="space-y-2">
-  
-            <Textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              placeholder="“I personally lead each pilot to ensure measurable impact in 90 days." — Deepak Jha, Founder & CEO"
+              placeholder="Let's explore how to scale it without scaling headcount."
               rows={4}
             />
           </div>
