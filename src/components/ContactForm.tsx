@@ -84,9 +84,9 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>Start Your 90-Day Value Multiplier Pilot </DialogTitle>
+          <DialogTitle>Start Your 90 Day Value Multiplier Pilot</DialogTitle>
           <DialogDescription>
-           See how your best judgment performs at scale risk-free.
+            See how your best judgment performs at scale risk-free.
           </DialogDescription>
         </DialogHeader>
         
@@ -188,7 +188,19 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               value={formData.message}
               onChange={handleChange}
               required
-              placeholder="What workflows keep you up at night? What manual processes would you like to automate?"
+              placeholder="Let’s explore how to scale it without scaling headcount."
+              rows={4}
+            />
+          </div>
+          <div className="space-y-2">
+  
+            <Textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              placeholder="“I personally lead each pilot to ensure measurable impact in 90 days." — Deepak Jha, Founder & CEO"
               rows={4}
             />
           </div>
@@ -198,7 +210,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               Cancel
             </Button>
             <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? 'Submitting...' : 'Join the Program'}
+              {isSubmitting ? 'Submitting...' : 'Confirm'}
             </Button>
           </div>
         </form>
