@@ -176,7 +176,7 @@ ${formData.challenges}
                 disabled={!isFormValid}
                 className="flex-1 bg-primary hover:bg-primary/90"
               >
-                Join the Program
+                Start Pilot
               </Button>
             </div>
           </form>
