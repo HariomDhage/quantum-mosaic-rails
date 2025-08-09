@@ -81,7 +81,7 @@ const ExecutiveHero = () => {
             <div className="mb-8 animate-fade-in">
               <span className="inline-flex items-center gap-2 bg-emerald-400/10 text-emerald-300 px-6 py-3 rounded-full text-lg font-semibold border border-emerald-400/20">
                 <Zap className="w-5 h-5" />
-                Enterprise AI Execution
+                Your Judgment. Everywhere.
               </span>
             </div>
             

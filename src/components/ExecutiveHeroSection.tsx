@@ -36,7 +36,7 @@ const ExecutiveHeroSection = () => {
             {/* Badge */}
             <div className="mb-8">
               <span className="inline-block bg-emerald-400/20 text-emerald-300 px-6 py-3 rounded-full text-lg font-semibold border border-emerald-400/30">
-                Enterprise AI Execution
+                Your Judgment. Everywhere.
               </span>
             </div>
             
