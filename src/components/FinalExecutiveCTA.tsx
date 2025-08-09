@@ -102,7 +102,7 @@ const FinalExecutiveCTA = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center">
-                Book a Live Demo
+                Book a Pilot Call
                 <ChevronRight className="ml-4 h-8 w-8 group-hover:translate-x-2 transition-transform" />
               </span>
             </Button>
