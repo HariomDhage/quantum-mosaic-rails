@@ -24,12 +24,6 @@ const QuantumFooter = () => {
           {/* Navigation Links */}
           <div className="flex items-center space-x-6 sm:space-x-8 text-sm sm:text-base">
             <Link 
-              to="/about"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              About
-            </Link>
-            <Link 
               to="/privacy"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
