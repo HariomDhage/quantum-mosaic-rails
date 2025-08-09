@@ -62,7 +62,7 @@ ${formData.challenges}
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center text-primary mb-2">
-            Join the XOS Pioneer Program
+            Start Your 90-Day Value Multiplier Pilot
           </DialogTitle>
           <p className="text-center text-muted-foreground">
             Be among the first firms to enforce institutional logic as code. Choose how you'd like to connect with us.
