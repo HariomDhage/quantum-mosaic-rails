@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ContactFormModal from './ContactFormModal';
 
 const QuantumHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const navItems = [
     { name: 'Privacy', href: '/privacy' },
@@ -39,7 +41,7 @@ const QuantumHeader = () => {
             <Button 
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
-              onClick={() => window.open('mailto:deepak@quantummosaic.com', '_blank')}
+              onClick={() => setIsContactModalOpen(true)}
             >
               Contact
             </Button>
@@ -72,7 +74,7 @@ const QuantumHeader = () => {
                 <Button 
                   variant="outline"
                   className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                  onClick={() => window.open('mailto:deepak@quantummosaic.com', '_blank')}
+                  onClick={() => setIsContactModalOpen(true)}
                 >
                   Contact
                 </Button>
@@ -81,6 +83,11 @@ const QuantumHeader = () => {
           </div>
         )}
       </nav>
+      
+      <ContactFormModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </header>
   );
 };
