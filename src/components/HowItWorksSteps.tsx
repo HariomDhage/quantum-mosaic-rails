@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Brain, Cpu, Command, ArrowRight } from 'lucide-react';
 
 const HowItWorksSteps = () => {
-  const [selectedStep, setSelectedStep] = useState<number | null>(null);
 
   const steps = [
     {
@@ -62,8 +61,7 @@ const HowItWorksSteps = () => {
           {steps.map((step, index) => (
             <React.Fragment key={step.id}>
               <Card
-                className="group cursor-pointer bg-transparent border-0 w-full lg:w-80"
-                onClick={() => setSelectedStep(selectedStep === step.id ? null : step.id)}
+                className="group bg-transparent border-0 w-full lg:w-80"
               >
                 <CardContent className="p-0">
                   <div className={`
@@ -89,29 +87,22 @@ const HowItWorksSteps = () => {
                       {step.subtitle}
                     </p>
                     
-                    {/* Expanded Details */}
-                    {selectedStep === step.id && (
-                      <div className="absolute inset-0 bg-slate-900/95 rounded-2xl p-8 flex flex-col justify-center">
-                        <div className="space-y-4">
-                          <div>
-                            <div className="text-emerald-400 font-semibold mb-1">Process:</div>
-                            <div className="text-sm">{step.details.process}</div>
-                          </div>
-                          <div>
-                            <div className="text-blue-400 font-semibold mb-1">Outcome:</div>
-                            <div className="text-sm">{step.details.outcome}</div>
-                          </div>
-                          <div>
-                            <div className="text-purple-400 font-semibold mb-1">Timeline:</div>
-                            <div className="text-sm">{step.details.timeframe}</div>
-                          </div>
+                    {/* Expanded Details on Hover */}
+                    <div className="absolute inset-0 bg-slate-900/95 rounded-2xl p-8 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="space-y-4">
+                        <div>
+                          <div className="text-emerald-400 font-semibold mb-1">Process:</div>
+                          <div className="text-sm">{step.details.process}</div>
+                        </div>
+                        <div>
+                          <div className="text-blue-400 font-semibold mb-1">Outcome:</div>
+                          <div className="text-sm">{step.details.outcome}</div>
+                        </div>
+                        <div>
+                          <div className="text-purple-400 font-semibold mb-1">Timeline:</div>
+                          <div className="text-sm">{step.details.timeframe}</div>
                         </div>
                       </div>
-                    )}
-                    
-                    {/* Click Hint */}
-                    <div className="absolute bottom-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                      Click for details
                     </div>
                   </div>
                 </CardContent>
