@@ -74,7 +74,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     window.open('https://calendly.com/deepak-q-mosaic-ai/45min', '_blank');
     toast({
       title: "Opening Calendly",
-      description: "You can now schedule a meeting directly with Deepak Jha, our Founder.",
+      description: "You can now schedule a meeting directly with Deepak Jha, our Founder, CEO.",
     });
     onClose();
   };
