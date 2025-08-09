@@ -48,7 +48,7 @@ const QuantumFooter = () => {
               <span className="sm:hidden">Contact</span>
             </a>
             <a
-              href="https://linkedin.com/company/quantum-mosaic"
+              href="https://www.linkedin.com/company/quantummosaic/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
