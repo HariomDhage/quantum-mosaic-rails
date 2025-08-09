@@ -39,6 +39,7 @@ const QuantumHeader = () => {
             <Button 
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+              onClick={() => window.open('mailto:deepak@quantummosaic.com', '_blank')}
             >
               Contact
             </Button>
@@ -71,6 +72,7 @@ const QuantumHeader = () => {
                 <Button 
                   variant="outline"
                   className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  onClick={() => window.open('mailto:deepak@quantummosaic.com', '_blank')}
                 >
                   Contact
                 </Button>
