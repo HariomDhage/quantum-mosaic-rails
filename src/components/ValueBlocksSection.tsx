@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Brain, Zap, Shield } from 'lucide-react';
+import { Brain, Zap, Shield, X } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const ValueBlocksSection = () => {
+  const [selectedBlock, setSelectedBlock] = useState<number | null>(null);
 
   const valueBlocks = [
     {
@@ -54,7 +56,8 @@ const ValueBlocksSection = () => {
             {valueBlocks.map((block) => (
               <Card
                 key={block.id}
-                className="group border-0 bg-transparent overflow-hidden"
+                className="group cursor-pointer border-0 bg-transparent overflow-hidden"
+                onClick={() => setSelectedBlock(block.id)}
               >
                 <CardContent className="p-0">
                   <div className={`
@@ -91,22 +94,9 @@ const ValueBlocksSection = () => {
                         {block.powerPhrase}
                       </p>
                       
-                      {/* Hover Details */}
-                      <div className="absolute inset-0 bg-slate-900/95 rounded-2xl p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="text-center">
-                          <h4 className="text-2xl font-bold mb-4 text-emerald-400">
-                            {block.modalContent.headline}
-                          </h4>
-                          <div className="space-y-2 mb-4">
-                            {block.modalContent.stats.map((stat, index) => (
-                              <div key={index} className="text-sm text-emerald-400 font-semibold">
-                                {stat}
-                              </div>
-                            ))}
-                          </div>
-                          <p className="text-sm text-slate-300 leading-relaxed">
-                            {block.modalContent.description}
-                          </p>
+                      <div className="mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="text-sm font-medium bg-white/20 px-4 py-2 rounded-full">
+                          Click to explore →
                         </div>
                       </div>
                     </div>
@@ -118,6 +108,49 @@ const ValueBlocksSection = () => {
         </div>
       </section>
 
+      {/* Modal for expanded content */}
+      <Dialog open={selectedBlock !== null} onOpenChange={() => setSelectedBlock(null)}>
+        <DialogContent className="max-w-2xl bg-slate-900 border-slate-700 text-white">
+          {selectedBlock && (
+            <div className="p-8">
+              <button
+                onClick={() => setSelectedBlock(null)}
+                className="absolute top-4 right-4 text-slate-400 hover:text-white"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              
+              {(() => {
+                const block = valueBlocks.find(b => b.id === selectedBlock);
+                if (!block) return null;
+                
+                return (
+                  <div className="text-center">
+                    <block.icon className="w-16 h-16 mx-auto mb-6 text-emerald-400" />
+                    <h2 className="text-4xl font-bold mb-6">
+                      {block.modalContent.headline}
+                    </h2>
+                    
+                    <div className="grid grid-cols-3 gap-6 mb-8">
+                      {block.modalContent.stats.map((stat, index) => (
+                        <div key={index} className="bg-slate-800 rounded-xl p-4">
+                          <div className="text-emerald-400 font-bold text-lg">
+                            {stat}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <p className="text-xl text-slate-300 leading-relaxed">
+                      {block.modalContent.description}
+                    </p>
+                  </div>
+                );
+              })()}
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
