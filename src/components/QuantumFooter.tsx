@@ -16,7 +16,7 @@ const QuantumFooter = () => {
             />
             <div className="hidden md:block">
               <div className="text-xs sm:text-sm text-muted-foreground">
-                The AWS for Enterprise AI Factories
+                Scale Judgment. Multiply Impact. Instead of AWS
               </div>
             </div>
           </div>
