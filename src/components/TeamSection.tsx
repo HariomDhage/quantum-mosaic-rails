@@ -29,7 +29,7 @@ const TeamSection = () => {
               </div>
               
               <h3 className="text-2xl font-bold text-foreground mb-1">Deepak Jha</h3>
-              <div className="text-primary font-semibold mb-4 text-lg">Founder</div>
+              <div className="text-primary font-semibold mb-4 text-lg">Founder, CEO</div>
               
               <p className="text-muted-foreground leading-relaxed">
                 Deepak is a 2x founder with a deep background in enterprise sales and go-to-market strategy from his time at major firms like Oracle, GE, and Accenture.
