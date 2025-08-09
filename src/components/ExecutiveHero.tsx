@@ -111,7 +111,7 @@ const ExecutiveHero = () => {
                 size="lg"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white px-12 py-6 rounded-xl font-bold text-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-600/25 hover:scale-105 group"
               >
-                Experience a Live Judgment Corridor
+                Book a Pilot Call
                 <ChevronRight className="ml-3 h-7 w-7 group-hover:translate-x-2 transition-transform" />
               </Button>
               
