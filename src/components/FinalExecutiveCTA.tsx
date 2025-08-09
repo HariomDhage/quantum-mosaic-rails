@@ -107,15 +107,6 @@ const FinalExecutiveCTA = () => {
               </span>
             </Button>
             
-            <Button
-              onClick={handleBriefing}
-              variant="outline"
-              size="lg"
-              className="border-3 border-blue-400 bg-blue-600/20 text-blue-200 hover:bg-blue-600/40 hover:border-blue-300 px-16 py-8 rounded-2xl font-bold text-2xl transition-all duration-500 hover:shadow-xl group"
-            >
-              <Download className="mr-4 h-8 w-8 group-hover:scale-110 transition-transform" />
-              Download Executive Briefing
-            </Button>
           </div>
 
           {/* Trust Indicators */}
