@@ -16,7 +16,7 @@ const QuantumFooter = () => {
             />
             <div className="hidden md:block">
               <div className="text-xs sm:text-sm text-muted-foreground">
-                Scale Judgment. Multiply Impact. Instead of AWS
+                Scale Judgment. Multiply Impact.
               </div>
             </div>
           </div>
