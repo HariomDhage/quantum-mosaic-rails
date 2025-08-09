@@ -92,19 +92,19 @@ const ValueBlocksSection = () => {
                       </p>
                       
                       {/* Hover Details */}
-                      <div className="absolute inset-0 bg-slate-900/95 rounded-2xl p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute inset-0 bg-slate-900/98 rounded-2xl p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="text-center">
-                          <h4 className="text-2xl font-bold mb-4 text-emerald-400">
+                          <h4 className="text-2xl font-bold mb-4 text-white">
                             {block.modalContent.headline}
                           </h4>
                           <div className="space-y-2 mb-4">
                             {block.modalContent.stats.map((stat, index) => (
-                              <div key={index} className="text-sm text-emerald-400 font-semibold">
+                              <div key={index} className="text-sm text-emerald-300 font-semibold bg-emerald-900/30 px-3 py-1 rounded-full">
                                 {stat}
                               </div>
                             ))}
                           </div>
-                          <p className="text-sm text-slate-300 leading-relaxed">
+                          <p className="text-sm text-slate-100 leading-relaxed">
                             {block.modalContent.description}
                           </p>
                         </div>
