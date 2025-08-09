@@ -6,6 +6,7 @@ import ValueBlocksSection from '@/components/ValueBlocksSection';
 import ProofCaseStudies from '@/components/ProofCaseStudies';
 import HowItWorksSteps from '@/components/HowItWorksSteps';
 import JudgmentCorridorsComparison from '@/components/JudgmentCorridorsComparison';
+import TeamSection from '@/components/TeamSection';
 import FinalExecutiveCTA from '@/components/FinalExecutiveCTA';
 import SEO from '@/components/SEO';
 
@@ -24,6 +25,7 @@ const Index = () => {
         <ProofCaseStudies />
         <HowItWorksSteps />
         <JudgmentCorridorsComparison />
+        <TeamSection />
         <FinalExecutiveCTA />
       </main>
       <QuantumFooter />
