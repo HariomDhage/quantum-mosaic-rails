@@ -67,7 +67,7 @@ const QuantumFooter = () => {
         {/* Bottom Section */}
         <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-border text-center">
           <p className="text-xs sm:text-sm text-muted-foreground">
-            Built with precision by <span className="text-primary font-medium">Quantum Mosaic™</span>
+            Built with love from Silicon Valley
           </p>
           <p className="text-xs text-muted-foreground mt-1 sm:mt-2">
             © 2025 Quantum Mosaic. All rights reserved.
