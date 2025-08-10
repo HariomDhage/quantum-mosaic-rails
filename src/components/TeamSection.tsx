@@ -2,75 +2,61 @@ import React from 'react';
 
 const TeamSection = () => {
   return (
-    <section className="py-20 bg-dark-primary relative overflow-hidden">
-      {/* Animated background particles */}
-      <div className="absolute inset-0 particles-bg opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Minimal header */}
-        <div className="text-center mb-16 reveal">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4">
-            The Architects
+    <section className="py-16 sm:py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            The Team Building the Future
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto animate-pulse-glow"></div>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Pioneers in autonomous intelligence, enterprise architecture, and institutional finance
+          </p>
         </div>
 
-        {/* Premium team cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* Deepak Jha */}
-          <div className="group hover-lift reveal" style={{ animationDelay: '0.2s' }}>
-            <div className="bg-background/10 backdrop-blur-sm rounded-3xl p-10 border border-primary-foreground/10 hover:border-accent/50 transition-all duration-500 hover:bg-background/20">
-              <div className="flex flex-col items-center text-center">
-                <div className="relative mb-8">
-                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent/30 group-hover:border-accent transition-all duration-500 group-hover:scale-110">
-                    <img
-                      src="/images/deepak-jha.png"
-                      alt="Deepak Jha"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-accent rounded-full border-4 border-dark-primary flex items-center justify-center group-hover:animate-pulse">
-                    <div className="w-4 h-4 bg-primary-foreground rounded-full"></div>
-                  </div>
+          <div className="group bg-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 border border-border">
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 group-hover:border-primary/40 transition-colors duration-300">
+                  <img
+                    src="/images/deepak-jha.png"
+                    alt="Deepak Jha"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                
-                <h3 className="text-3xl font-bold text-primary-foreground mb-2">Deepak Jha</h3>
-                <div className="text-accent font-bold mb-6 text-xl tracking-wide">FOUNDER, CEO</div>
-                
-                <div className="text-primary-foreground/80 leading-relaxed text-lg font-light">
-                  Enterprise strategist. Oracle, GE, Accenture veteran.
-                  <span className="block mt-2 text-accent font-medium">2x Founder</span>
-                </div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full border-4 border-background"></div>
               </div>
+              
+              <h3 className="text-2xl font-bold text-foreground mb-1">Deepak Jha</h3>
+              <div className="text-primary font-semibold mb-4 text-lg">Founder, CEO</div>
+              
+              <p className="text-muted-foreground leading-relaxed">
+                Deepak is a 2x founder with a deep background in enterprise sales and go-to-market strategy from his time at major firms like Oracle, GE, and Accenture.
+              </p>
             </div>
           </div>
 
           {/* Gunjan Karun */}
-          <div className="group hover-lift reveal" style={{ animationDelay: '0.4s' }}>
-            <div className="bg-background/10 backdrop-blur-sm rounded-3xl p-10 border border-primary-foreground/10 hover:border-accent/50 transition-all duration-500 hover:bg-background/20">
-              <div className="flex flex-col items-center text-center">
-                <div className="relative mb-8">
-                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent/30 group-hover:border-accent transition-all duration-500 group-hover:scale-110">
-                    <img
-                      src="/images/gunjan-karun.png"
-                      alt="Gunjan Karun"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-accent rounded-full border-4 border-dark-primary flex items-center justify-center group-hover:animate-pulse">
-                    <div className="w-4 h-4 bg-primary-foreground rounded-full"></div>
-                  </div>
+          <div className="group bg-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 border border-border">
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 group-hover:border-primary/40 transition-colors duration-300">
+                  <img
+                    src="/images/gunjan-karun.png"
+                    alt="Gunjan Karun"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                
-                <h3 className="text-3xl font-bold text-primary-foreground mb-2">Gunjan Karun</h3>
-                <div className="text-accent font-bold mb-6 text-xl tracking-wide">CTO</div>
-                
-                <div className="text-primary-foreground/80 leading-relaxed text-lg font-light">
-                  AI architecture visionary. Event-driven systems expert.
-                  <span className="block mt-2 text-accent font-medium">3 U.S. Patents</span>
-                </div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full border-4 border-background"></div>
               </div>
+              
+              <h3 className="text-2xl font-bold text-foreground mb-1">Gunjan Karun</h3>
+              <div className="text-primary font-semibold mb-4 text-lg">CTO</div>
+              
+              <p className="text-muted-foreground leading-relaxed">
+                Gunjan leads our technology vision with deep expertise in event-driven architecture, policy engines, and AI/NLP. He holds three U.S. patents in related fields.
+              </p>
             </div>
           </div>
         </div>
