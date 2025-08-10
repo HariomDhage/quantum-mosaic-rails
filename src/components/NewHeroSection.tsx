@@ -54,22 +54,13 @@ const NewHeroSection = () => {
               90 Days. No New Headcount.
             </h2>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex justify-center">
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-white px-12 py-6 text-xl font-semibold rounded-full hover-lift animate-pulse-glow"
                 onClick={() => setIsContactModalOpen(true)}
               >
                 Book Your Pilot Call
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-white/30 text-white hover:bg-white/10 px-12 py-6 text-xl font-semibold rounded-full hover-lift"
-                onClick={() => setIsContactModalOpen(true)}
-              >
-                Speak to Us
               </Button>
             </div>
           </div>
