@@ -2,6 +2,7 @@ import React from 'react';
 import NewHeader from '@/components/NewHeader';
 import NewFooter from '@/components/NewFooter';
 import NewHeroSection from '@/components/NewHeroSection';
+import ValueSnapshotSection from '@/components/ValueSnapshotSection';
 import ProblemUrgencySection from '@/components/ProblemUrgencySection';
 import HowItWorksNewSection from '@/components/HowItWorksNewSection';
 import ProofSection from '@/components/ProofSection';
@@ -22,6 +23,7 @@ const Index = () => {
       />
       <main className="pt-16">
         <NewHeroSection />
+        <ValueSnapshotSection />
         <ProblemUrgencySection />
         <HowItWorksNewSection />
         <ProofSection />

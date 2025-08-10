@@ -1,58 +1,83 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import ContactFormModal from './ContactFormModal';
 
 const NewHeroSection = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
-  const benefits = [
-    "300–500% ROI in 6 months",
-    "40% faster decisions without compliance misses", 
-    "Live in 60 days or less — full money-back guarantee"
-  ];
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <section className="min-h-screen bg-dark-primary text-white relative overflow-hidden flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-              Outpace Competitors: Double Deal Throughput in 90 Days — No New Headcount
+      <section className="min-h-screen particles-bg text-white relative overflow-hidden flex items-center justify-center">
+        {/* Floating Particles */}
+        <div className="absolute inset-0">
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-white/20 rounded-full animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 6}s`,
+                animationDuration: `${4 + Math.random() * 4}s`
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Parallax Background */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`,
+            background: 'radial-gradient(circle at 30% 70%, hsl(var(--secondary) / 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 30%, hsl(var(--accent) / 0.2) 0%, transparent 50%)'
+          }}
+        />
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="animate-fade-in-up">
+            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 leading-tight tracking-tight">
+              Double Deal<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-white">
+                Throughput
+              </span>
             </h1>
             
-            <div className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-accent rounded-full flex items-center justify-center mt-0.5">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                  <p className="text-lg sm:text-xl text-gray-100">{benefit}</p>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-12 text-white/90">
+              90 Days. No New Headcount.
+            </h2>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-accent hover:bg-accent/90 text-white px-12 py-6 text-xl font-semibold rounded-full hover-lift animate-pulse-glow"
                 onClick={() => setIsContactModalOpen(true)}
               >
-                BOOK YOUR 45-MINUTE PILOT CALL
+                Book Your Pilot Call
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-white/30 text-white hover:bg-white/10 px-12 py-6 text-xl font-semibold rounded-full hover-lift"
+                onClick={() => setIsContactModalOpen(true)}
+              >
+                Speak to Us
               </Button>
             </div>
           </div>
         </div>
-        
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}></div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-8 h-8 text-white/60" />
         </div>
       </section>
       
