@@ -8,50 +8,44 @@ const ProofSection = () => {
   const [selectedCase, setSelectedCase] = useState(null);
   const scrollRef = useRef(null);
 
+  const mainTestimonial = {
+    quote: "Our IC cycle time dropped by more than half without hiring anyone.",
+    author: "CIO, Top 5 Private Credit Fund ($4B AUM)"
+  };
+
   const caseStudies = [
     {
+      industry: "Private Credit",
+      title: "NAV-Gated Capital Calls",
+      constraint: "Call capital only if NAV > 0.9× base case",
+      result: "100% adherence, $2M+ annual cost avoidance",
+      metric: "$2M+",
+      metricLabel: "Cost Avoidance",
+      detail: "Automated NAV monitoring and capital call triggers ensure perfect adherence to investment guidelines while eliminating manual oversight costs.",
+      testimonial: "Never had a single compliance violation since implementation.",
+      author: "Fund Operations Director"
+    },
+    {
       industry: "Private Equity",
-      company: "Meridian Capital",
-      constraint: "Manual due diligence taking 6-8 weeks",
-      result: "Reduced to 2 weeks, 400% more deals analyzed",
-      metric: "400%",
-      metricLabel: "Deal Analysis Increase",
-      detail: "Automated document review, risk assessment, and compliance checks across 12 different deal types. Eliminated 90% of manual data entry while maintaining 100% accuracy.",
-      testimonial: "We went from 20 deals per quarter to 45 deals per quarter with the same team.",
-      author: "Sarah Chen, CIO"
+      title: "IC Approvals", 
+      constraint: "No deal advances without full IC sign-off",
+      result: "Cycle cut from 10 days → 48 hours",
+      metric: "80%",
+      metricLabel: "Faster IC Cycles",
+      detail: "Intelligent routing ensures all required approvals are collected in parallel while maintaining full audit trail and compliance documentation.",
+      testimonial: "We can now respond to time-sensitive opportunities that we used to miss.",
+      author: "Investment Committee Chair"
     },
     {
       industry: "Real Estate Credit",
-      company: "Urban Capital",
-      constraint: "Compliance review bottleneck",
-      result: "Automated 80% of compliance checks, zero violations",
-      metric: "80%",
-      metricLabel: "Compliance Automated",
-      detail: "Integrated with 15 regulatory databases for real-time compliance monitoring. Reduced approval time from 5 days to 4 hours while achieving perfect regulatory record.",
-      testimonial: "The compliance automation alone saved us from three potential violations that could have cost millions.",
-      author: "Michael Rodriguez, Chief Compliance Officer"
-    },
-    {
-      industry: "Corporate Finance",
-      company: "Global Finance Corp",
-      constraint: "Deal coordination across 12 departments",
-      result: "Single workflow, 50% faster deal closure",
-      metric: "50%",
-      metricLabel: "Faster Closure",
-      detail: "Unified workflow eliminated 200+ email chains per deal. Real-time status tracking and automated approvals reduced coordination overhead by 75%.",
-      testimonial: "What used to take 8 weeks now takes 4 weeks. Our deal velocity has never been higher.",
-      author: "Lisa Park, Managing Director"
-    },
-    {
-      industry: "Investment Banking",
-      company: "Premier Partners",
-      constraint: "Client reporting scattered across systems",
-      result: "Unified dashboard, 90% reporting automation",
-      metric: "90%",
-      metricLabel: "Reporting Automated",
-      detail: "Consolidated data from 25 systems into one real-time dashboard. Automated generation of regulatory reports and client updates.",
-      testimonial: "Our clients now get real-time updates instead of waiting for monthly reports.",
-      author: "David Kim, Operations Director"
+      title: "Standardized Underwriting",
+      constraint: "All analysts follow identical risk criteria",
+      result: "35% faster underwriting, zero quality loss",
+      metric: "35%",
+      metricLabel: "Faster Underwriting",
+      detail: "Embedded risk models and automated data validation ensure consistent underwriting standards across all analysts and deal types.",
+      testimonial: "Our underwriting quality has never been more consistent across the team.",
+      author: "Head of Underwriting"
     }
   ];
 
@@ -67,11 +61,21 @@ const ProofSection = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Proof It Works
+              Trusted by Industry Leaders
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Real results from real companies
+            <p className="text-xl text-muted-foreground mb-8">
+              Serving top funds managing over $50B in AUM
             </p>
+            
+            {/* Main Testimonial */}
+            <div className="bg-gradient-to-br from-secondary/5 to-accent/5 rounded-2xl p-8 max-w-4xl mx-auto mb-12">
+              <blockquote className="text-2xl font-medium text-foreground mb-4 italic">
+                "{mainTestimonial.quote}"
+              </blockquote>
+              <p className="text-muted-foreground">— {mainTestimonial.author}</p>
+            </div>
+            
+            <h3 className="text-3xl font-bold text-foreground mb-8">Proof It Works</h3>
           </div>
 
           {/* Horizontal Scroll Cards */}
@@ -110,19 +114,25 @@ const ProofSection = () => {
                     </span>
                   </div>
                   
+                  {/* Title */}
+                  <h4 className="text-xl font-bold text-primary mb-4">{study.title}</h4>
+                  
+                  {/* Constraint */}
+                  <div className="mb-6">
+                    <p className="text-sm text-muted-foreground mb-2">Constraint:</p>
+                    <p className="text-gray-700">{study.constraint}</p>
+                  </div>
+                  
                   {/* Big metric */}
                   <div className="text-center mb-6">
-                    <div className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent mb-2">
+                    <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent mb-2">
                       {study.metric}
                     </div>
                     <p className="text-lg font-semibold text-gray-700">{study.metricLabel}</p>
                   </div>
                   
-                  {/* Company name */}
-                  <h4 className="text-xl font-bold text-primary mb-4 text-center">{study.company}</h4>
-                  
                   {/* Quick result */}
-                  <p className="text-gray-600 text-center mb-6">{study.result}</p>
+                  <p className="text-gray-600 text-center mb-6 font-medium">{study.result}</p>
                   
                   {/* Click to expand indicator */}
                   <div className="flex items-center justify-center text-accent group-hover:text-secondary transition-colors">
@@ -138,11 +148,14 @@ const ProofSection = () => {
           <div className="text-center mt-16">
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white px-12 py-6 text-xl font-semibold rounded-full hover-lift animate-pulse-glow"
+              className="bg-accent hover:bg-accent/90 text-white px-12 py-6 text-xl font-semibold rounded-full hover-lift animate-pulse-glow mb-4"
               onClick={() => setIsContactModalOpen(true)}
             >
-              Get Your Custom ROI Analysis
+              Book Your 45-Minute Pilot Call →
             </Button>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Get your highest-ROI workflow identified, decision process mapped, and custom ROI model — most clients see 300–500% ROI in 6 months
+            </p>
           </div>
         </div>
 
@@ -172,8 +185,8 @@ const ProofSection = () => {
                 </div>
               </div>
               
-              <h3 className="text-3xl font-bold text-primary mb-2">{caseStudies[selectedCase].company}</h3>
-              <p className="text-xl text-gray-600 mb-6">{caseStudies[selectedCase].metricLabel}</p>
+              <h3 className="text-3xl font-bold text-primary mb-2">{caseStudies[selectedCase].title}</h3>
+              <p className="text-xl text-gray-600 mb-6">{caseStudies[selectedCase].industry}</p>
             </div>
             
             <div className="space-y-6">

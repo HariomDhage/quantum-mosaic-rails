@@ -4,6 +4,7 @@ import NewFooter from '@/components/NewFooter';
 import NewHeroSection from '@/components/NewHeroSection';
 import ValueSnapshotSection from '@/components/ValueSnapshotSection';
 import ProblemUrgencySection from '@/components/ProblemUrgencySection';
+import WhatWeDoSection from '@/components/WhatWeDoSection';
 import HowItWorksNewSection from '@/components/HowItWorksNewSection';
 import ProofSection from '@/components/ProofSection';
 import StartAnywhereSection from '@/components/StartAnywhereSection';
@@ -25,6 +26,7 @@ const Index = () => {
         <NewHeroSection />
         <ValueSnapshotSection />
         <ProblemUrgencySection />
+        <WhatWeDoSection />
         <HowItWorksNewSection />
         <ProofSection />
         <StartAnywhereSection />

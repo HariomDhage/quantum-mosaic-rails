@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Zap, Shield } from 'lucide-react';
+import { TrendingUp, Zap, Shield, Clock, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import ContactFormModal from './ContactFormModal';
 
 const ValueSnapshotSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,78 +23,86 @@ const ValueSnapshotSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const stats = [
+  const quickValues = [
     {
       icon: TrendingUp,
-      number: "300–500%",
-      label: "ROI",
-      description: "Return on investment achieved within 6 months",
-      delay: "0ms"
+      text: "2–3× throughput with your current team"
     },
     {
       icon: Zap,
-      number: "40%",
-      label: "Faster Decisions",
-      description: "Speed increase without compliance misses",
-      delay: "200ms"
+      text: "40% faster decision cycles — no quality loss"
     },
     {
       icon: Shield,
-      number: "100%",
-      label: "Compliance",
-      description: "Full regulatory adherence guaranteed",
-      delay: "400ms"
+      text: "300–500% ROI in 6 months (proven across $50B+ in AUM)"
+    },
+    {
+      icon: CheckCircle,
+      text: "100% policy compliance — every time, no exceptions"
+    },
+    {
+      icon: Clock,
+      text: "Live in 90 days or less — full money-back guarantee"
     }
   ];
 
   return (
-    <section id="value-snapshot" className="py-20 bg-section-light relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className={`group bg-white rounded-2xl p-8 text-center hover-lift cursor-pointer transition-all duration-500 ${
-                isVisible ? 'reveal revealed' : 'reveal'
-              }`}
-              style={{ animationDelay: stat.delay }}
-            >
-              <div className="relative">
-                {/* Icon */}
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-10 h-10 text-white" />
-                </div>
-
-                {/* Number */}
-                <div className="mb-4">
-                  <span className="text-5xl sm:text-6xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
-                    {stat.number}
-                  </span>
-                </div>
-
-                {/* Label */}
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  {stat.label}
-                </h3>
-
-                {/* Description - Hidden by default, shown on hover */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:translate-y-0 translate-y-2">
-                  <p className="text-muted-foreground text-sm">
-                    {stat.description}
-                  </p>
-                </div>
-
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
-              </div>
+    <>
+      <section id="value-snapshot" className="py-20 bg-section-light relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center space-x-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <Zap className="w-4 h-4" />
+              <span>Quick Value Snapshot — For the Time-Starved Executive</span>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      {/* Background decoration */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-accent/5 to-secondary/5 rounded-full blur-3xl -z-10" />
-    </section>
+          {/* Quick Value List */}
+          <div className="space-y-6 mb-12">
+            {quickValues.map((value, index) => (
+              <div
+                key={index}
+                className={`flex items-start space-x-4 bg-white rounded-xl p-6 shadow-sm hover-lift transition-all duration-500 ${
+                  isVisible ? 'reveal revealed' : 'reveal'
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                  <value.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-lg font-medium text-foreground">{value.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <Button
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-white px-12 py-6 text-xl font-semibold rounded-full hover-lift animate-pulse-glow mb-6"
+              onClick={() => setIsContactModalOpen(true)}
+            >
+              Book Your 45-Minute Pilot Call →
+            </Button>
+            
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              In one session: build your ROI model, pinpoint your highest-impact workflow, and see exactly how to digitize it for maximum return.
+            </p>
+          </div>
+        </div>
+
+        {/* Background decoration */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-accent/5 to-secondary/5 rounded-full blur-3xl -z-10" />
+      </section>
+      
+      <ContactFormModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
+    </>
   );
 };
 

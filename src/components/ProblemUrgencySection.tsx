@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { TrendingUp, TrendingDown, AlertTriangle } from 'lucide-react';
 
 const ProblemUrgencySection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,83 +20,91 @@ const ProblemUrgencySection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const problemPoints = [
+    {
+      icon: TrendingUp,
+      title: "Deal volume is rising",
+      description: "More opportunities than ever before"
+    },
+    {
+      icon: TrendingDown,
+      title: "Throughput is stalling",
+      description: "Teams can't keep up with demand"
+    },
+    {
+      icon: TrendingDown,
+      title: "Margins are shrinking",
+      description: "Competition eating into profits"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Compliance risk is climbing",
+      description: "Regulatory pressure increasing"
+    }
+  ];
+
+  const urgencyPoints = [
+    "Scarce, expensive talent takes years to train",
+    "Regulations tightening across all asset classes", 
+    "First movers win — those who embed elite decision-making into every workflow today will dominate the next decade"
+  ];
+
   return (
     <section id="problem-section" className="py-24 bg-white relative overflow-hidden">
-      {/* Split Screen Layout */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[600px]">
-          {/* Left Side - Chaotic */}
-          <div className="relative bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-12">
-            <div className={`text-center ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
-              {/* Chaotic visual representation */}
-              <div className="relative mb-8">
-                <div className="grid grid-cols-3 gap-4 opacity-60">
-                  {[...Array(9)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-12 h-12 bg-red-200 rounded-lg animate-pulse"
-                      style={{ animationDelay: `${i * 0.2}s` }}
-                    />
-                  ))}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Problem Statement */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8">
+            The Problem — And Why It's Urgent
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {problemPoints.map((point, index) => (
+              <div
+                key={index}
+                className={`bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 text-center transition-all duration-500 ${
+                  isVisible ? 'reveal revealed' : 'reveal'
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center">
+                  <point.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl">😵‍💫</div>
-                </div>
+                <h3 className="text-lg font-bold text-red-700 mb-2">{point.title}</h3>
+                <p className="text-sm text-red-600">{point.description}</p>
               </div>
-              
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-red-700">Deal Volume Rising</h3>
-                <h3 className="text-2xl font-bold text-orange-700">Margins Shrinking</h3>
-                <h3 className="text-2xl font-bold text-red-600">Compliance Risk Climbing</h3>
-              </div>
-            </div>
-            
-            {/* Parallax chaos elements */}
-            <div className="absolute top-4 right-4 w-8 h-8 bg-red-300 rounded-full animate-bounce" />
-            <div className="absolute bottom-4 left-4 w-6 h-6 bg-orange-300 rounded-full animate-ping" />
+            ))}
           </div>
+          
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Your best people are drowning in operational chaos while AI-powered competitors are multiplying their best judgment across every deal, every day.
+          </p>
+        </div>
 
-          {/* Right Side - Sleek AI */}
-          <div className="relative bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center p-12">
-            <div className={`text-center ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}>
-              {/* Clean AI workflow visual */}
-              <div className="relative mb-8">
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
-                    <div className="text-2xl">🎯</div>
-                  </div>
-                  <div className="w-8 h-1 bg-gradient-to-r from-secondary to-accent rounded-full" />
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center">
-                    <div className="text-2xl">⚡</div>
-                  </div>
-                  <div className="w-8 h-1 bg-gradient-to-r from-accent to-secondary rounded-full" />
-                  <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
-                    <div className="text-2xl">✅</div>
-                  </div>
-                </div>
+        {/* Why Now Section */}
+        <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 lg:p-12">
+          <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Why Now</h3>
+          
+          <div className="space-y-6">
+            {urgencyPoints.map((point, index) => (
+              <div
+                key={index}
+                className={`flex items-start space-x-4 transition-all duration-500 ${
+                  isVisible ? 'reveal revealed' : 'reveal'
+                }`}
+                style={{ animationDelay: `${600 + index * 100}ms` }}
+              >
+                <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-secondary to-accent rounded-full mt-3" />
+                <p className="text-lg text-muted-foreground">{point}</p>
               </div>
-              
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-purple-700">AI-Assisted Workflow</h3>
-                <h3 className="text-2xl font-bold text-blue-700">Automated Compliance</h3>
-                <h3 className="text-2xl font-bold text-purple-600">Effortless Scale</h3>
-              </div>
-            </div>
-
-            {/* Smooth flowing elements */}
-            <div className="absolute top-4 right-4 w-8 h-8 bg-purple-300 rounded-full animate-float" />
-            <div className="absolute bottom-4 left-4 w-6 h-6 bg-blue-300 rounded-full animate-float" style={{ animationDelay: '1s' }} />
+            ))}
           </div>
         </div>
       </div>
-      
-      {/* Overlaid text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="text-center bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl max-w-md">
-          <h2 className="text-4xl font-bold text-primary mb-4">The Problem</h2>
-          <p className="text-lg text-muted-foreground">Manual processes can't scale with opportunity</p>
-        </div>
-      </div>
+
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-red-100/20 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-orange-100/20 to-transparent rounded-full blur-3xl" />
     </section>
   );
 };

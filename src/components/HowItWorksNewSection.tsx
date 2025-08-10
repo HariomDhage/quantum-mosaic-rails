@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, Settings, Gauge, RefreshCw, X } from 'lucide-react';
+import { Camera, Settings, Gauge, RefreshCw, X, Brain, Zap } from 'lucide-react';
 
 const HowItWorksNewSection = () => {
   const [selectedStep, setSelectedStep] = useState(null);
@@ -7,32 +7,39 @@ const HowItWorksNewSection = () => {
   const steps = [
     {
       icon: Camera,
-      title: "Capture",
-      shortDesc: "Record workflow",
-      fullDesc: "Our AI observes and records your existing workflow in real-time, understanding every decision point, approval gate, and compliance checkpoint without disrupting your current operations.",
-      benefit: "Zero learning curve for your team"
+      title: "Capture Expertise",
+      shortDesc: "Map exactly how your best people assess, decide, and act",
+      fullDesc: "We work with your top performers to map their decision-making process in detail. Every approval gate, risk assessment, and compliance check is documented and understood.",
+      benefit: "Your best judgment, codified"
     },
     {
       icon: Settings,
-      title: "Encode", 
-      shortDesc: "Transform to AI",
-      fullDesc: "Advanced machine learning transforms your processes into intelligent automation rules, preserving your institutional knowledge while eliminating manual bottlenecks.",
-      benefit: "Preserve expertise, eliminate inefficiency"
+      title: "Encode Logic", 
+      shortDesc: "Turn judgment into rules, approval paths, and compliance triggers",
+      fullDesc: "Transform your expertise into enforceable workflows. Decision trees, approval hierarchies, and compliance gates are built into the system architecture.",
+      benefit: "Institutional knowledge preserved"
     },
     {
       icon: Gauge,
-      title: "Automate",
-      shortDesc: "Deploy & monitor",
-      fullDesc: "Seamless deployment with full compliance tracking and real-time monitoring. Every automated decision is logged, auditable, and reversible if needed.",
-      benefit: "Full transparency and control"
+      title: "Automate & Monitor",
+      shortDesc: "Route tasks, block out-of-policy actions, escalate instantly",
+      fullDesc: "Deploy intelligent workflows that automatically route decisions, prevent policy violations, and escalate edge cases to the right people at the right time.",
+      benefit: "Scale without losing control"
     },
     {
       icon: RefreshCw,
-      title: "Improve",
-      shortDesc: "Continuous optimization",
-      fullDesc: "The system learns from every transaction, continuously optimizing performance while maintaining 100% compliance with your regulatory requirements.",
-      benefit: "Gets better with every deal"
+      title: "Refine & Improve",
+      shortDesc: "Use analytics to sharpen execution continuously",
+      fullDesc: "The system learns from every transaction, providing insights and recommendations to continuously optimize your processes while maintaining compliance.",
+      benefit: "Gets smarter over time"
     }
+  ];
+
+  const techStack = [
+    "AI-assisted decision mapping",
+    "Dynamic approval engines", 
+    "Embedded compliance guards",
+    "Analytics dashboards"
   ];
 
   return (
@@ -88,10 +95,19 @@ const HowItWorksNewSection = () => {
             </div>
           </div>
 
-          {/* Bottom tagline */}
-          <div className="text-center mt-16">
-            <p className="text-2xl font-semibold text-white/90">
-              Deploy in 50 days with &lt;8 hours of IT time
+          {/* Tech Stack */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mt-16">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Under the Hood</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {techStack.map((tech, index) => (
+                <div key={index} className="flex items-center space-x-2 text-white/90">
+                  <Brain className="w-4 h-4 text-accent" />
+                  <span className="text-sm">{tech}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-white/70 text-center mt-6">
+              All live with &lt;8 hours of IT time
             </p>
           </div>
         </div>
