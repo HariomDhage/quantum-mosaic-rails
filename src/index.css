@@ -35,6 +35,8 @@
     /* Custom semantic colors */
     --background-dark: 320 69% 11%; /* Dark Burgundy for hero sections */
     --section-light: 0 0% 95.7%; /* Light background for alternating sections */
+    --modal-gradient-start: 285 85% 65%; /* Light Purple */
+    --modal-gradient-end: 266 75% 45%; /* Deeper Purple */
     
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -102,6 +104,11 @@
   
   .bg-section-light {
     background-color: hsl(var(--section-light));
+  }
+  
+  /* Modal gradient background */
+  .bg-modal-gradient {
+    background: linear-gradient(135deg, hsl(var(--modal-gradient-start)), hsl(var(--modal-gradient-end)));
   }
   
   /* Premium Animations */
