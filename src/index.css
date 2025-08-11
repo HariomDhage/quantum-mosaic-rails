@@ -12,7 +12,7 @@
     --card-foreground: 0 0% 10.2%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10.2%;
-    --primary: 340 82% 52%; /* Gulabi Pink for big sections */
+    --primary: 320 100% 50%; /* Bright Pink/Magenta for big sections */
     --primary-foreground: 0 0% 100%;
     --secondary: 195 84% 75%; /* Light Blue for smaller portions */
     --secondary-foreground: 0 0% 10%;
@@ -25,17 +25,17 @@
     --border: 0 0% 87%;
     --input: 0 0% 87%;
     --ring: 200 90% 70%;
-    --chart-1: 340 82% 52%;
+    --chart-1: 320 100% 50%;
     --chart-2: 195 84% 75%;
-    --chart-3: 340 82% 52%;
+    --chart-3: 320 100% 50%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     
     /* Custom semantic colors */
-    --background-dark: 340 82% 52%; /* Gulabi Pink for hero sections */
+    --background-dark: 320 100% 50%; /* Bright Pink/Magenta for hero sections */
     --section-light: 0 0% 95.7%; /* Light background for alternating sections */
-    --modal-gradient-start: 340 75% 70%; /* Light Gulabi Pink */
+    --modal-gradient-start: 320 90% 70%; /* Light Bright Pink/Magenta */
     --modal-gradient-end: 195 80% 65%; /* Light Blue */
     
     --sidebar-background: 0 0% 98%;
@@ -55,7 +55,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 320 50% 8%;
     --popover-foreground: 0 0% 95%;
-    --primary: 340 82% 52%; /* Gulabi Pink */
+    --primary: 320 100% 50%; /* Bright Pink/Magenta */
     --primary-foreground: 0 0% 100%;
     --secondary: 195 84% 75%; /* Light Blue */
     --secondary-foreground: 0 0% 10%;
@@ -68,9 +68,9 @@
     --border: 320 30% 20%;
     --input: 320 30% 20%;
     --ring: 200 90% 70%;
-    --chart-1: 340 82% 52%;
+    --chart-1: 320 100% 50%;
     --chart-2: 195 84% 75%;
-    --chart-3: 340 82% 52%;
+    --chart-3: 320 100% 50%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --sidebar-background: 240 5.9% 10%;
