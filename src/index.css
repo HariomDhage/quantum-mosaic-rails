@@ -12,31 +12,31 @@
     --card-foreground: 0 0% 10.2%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10.2%;
-    --primary: 320 100% 50%; /* Bright Pink/Magenta for big sections */
+    --primary: 320 75% 65%; /* Pink from gradient */
     --primary-foreground: 0 0% 100%;
-    --secondary: 195 84% 75%; /* Light Blue for smaller portions */
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 280 65% 70%; /* Purple from gradient */
+    --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 91%;
     --muted-foreground: 0 0% 29.4%; /* #4A4A4A */
-    --accent: 200 90% 70%; /* Light Blue accent */
-    --accent-foreground: 0 0% 10%;
+    --accent: 300 70% 68%; /* Mid-gradient color */
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 87%;
     --input: 0 0% 87%;
-    --ring: 200 90% 70%;
-    --chart-1: 320 100% 50%;
-    --chart-2: 195 84% 75%;
-    --chart-3: 320 100% 50%;
+    --ring: 300 70% 68%;
+    --chart-1: 320 75% 65%;
+    --chart-2: 280 65% 70%;
+    --chart-3: 300 70% 68%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     
     /* Custom semantic colors */
-    --background-dark: 320 100% 50%; /* Bright Pink/Magenta for hero sections */
+    --background-dark: 320 75% 65%; /* Pink from gradient for hero sections */
     --section-light: 0 0% 95.7%; /* Light background for alternating sections */
-    --modal-gradient-start: 320 90% 70%; /* Light Bright Pink/Magenta */
-    --modal-gradient-end: 195 80% 65%; /* Light Blue */
+    --modal-gradient-start: 280 65% 70%; /* Purple from gradient */
+    --modal-gradient-end: 320 75% 65%; /* Pink from gradient */
     
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -55,22 +55,22 @@
     --card-foreground: 0 0% 95%;
     --popover: 320 50% 8%;
     --popover-foreground: 0 0% 95%;
-    --primary: 320 100% 50%; /* Bright Pink/Magenta */
+    --primary: 320 75% 65%; /* Pink from gradient */
     --primary-foreground: 0 0% 100%;
-    --secondary: 195 84% 75%; /* Light Blue */
-    --secondary-foreground: 0 0% 10%;
-    --muted: 340 30% 20%;
+    --secondary: 280 65% 70%; /* Purple from gradient */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 320 30% 20%;
     --muted-foreground: 0 0% 65%;
-    --accent: 200 90% 70%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 300 70% 68%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
     --border: 320 30% 20%;
     --input: 320 30% 20%;
-    --ring: 200 90% 70%;
-    --chart-1: 320 100% 50%;
-    --chart-2: 195 84% 75%;
-    --chart-3: 320 100% 50%;
+    --ring: 300 70% 68%;
+    --chart-1: 320 75% 65%;
+    --chart-2: 280 65% 70%;
+    --chart-3: 300 70% 68%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --sidebar-background: 240 5.9% 10%;
@@ -108,7 +108,7 @@
   
   /* Modal gradient background */
   .bg-modal-gradient {
-    background: linear-gradient(135deg, hsl(var(--modal-gradient-start)), hsl(var(--modal-gradient-end)), hsl(330 80% 85%));
+    background: linear-gradient(135deg, hsl(var(--modal-gradient-start)), hsl(var(--modal-gradient-end)));
   }
   
   /* Premium Animations */
