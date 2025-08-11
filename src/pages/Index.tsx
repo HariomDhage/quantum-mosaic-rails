@@ -10,7 +10,7 @@ import ProofSection from '@/components/ProofSection';
 import StartAnywhereSection from '@/components/StartAnywhereSection';
 import ImplementationSection from '@/components/ImplementationSection';
 import TeamSection from '@/components/TeamSection';
-import FinalCTASection from '@/components/FinalCTASection';
+
 import SEO from '@/components/SEO';
 
 const Index = () => {
@@ -32,7 +32,7 @@ const Index = () => {
         <StartAnywhereSection />
         <ImplementationSection />
         <TeamSection />
-        <FinalCTASection />
+        
       </main>
       <NewFooter />
     </div>
