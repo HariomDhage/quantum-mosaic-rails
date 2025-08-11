@@ -12,31 +12,31 @@
     --card-foreground: 0 0% 10.2%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10.2%;
-    --primary: 320 69% 11%; /* Dark Burgundy #2A0E1C */
+    --primary: 340 82% 52%; /* Gulabi Pink for big sections */
     --primary-foreground: 0 0% 100%;
-    --secondary: 266 46% 31%; /* Royal Purple #6A3FA4 */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 195 84% 75%; /* Light Blue for smaller portions */
+    --secondary-foreground: 0 0% 10%;
     --muted: 0 0% 91%;
     --muted-foreground: 0 0% 29.4%; /* #4A4A4A */
-    --accent: 285 49% 33%; /* Purple Magenta #75338F */
-    --accent-foreground: 0 0% 100%;
+    --accent: 200 90% 70%; /* Light Blue accent */
+    --accent-foreground: 0 0% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 87%;
     --input: 0 0% 87%;
-    --ring: 285 49% 33%;
-    --chart-1: 266 46% 31%;
-    --chart-2: 285 49% 33%;
-    --chart-3: 320 69% 11%;
+    --ring: 200 90% 70%;
+    --chart-1: 340 82% 52%;
+    --chart-2: 195 84% 75%;
+    --chart-3: 340 82% 52%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     
     /* Custom semantic colors */
-    --background-dark: 320 69% 11%; /* Dark Burgundy for hero sections */
+    --background-dark: 340 82% 52%; /* Gulabi Pink for hero sections */
     --section-light: 0 0% 95.7%; /* Light background for alternating sections */
-    --modal-gradient-start: 285 85% 65%; /* Light Purple */
-    --modal-gradient-end: 266 75% 45%; /* Deeper Purple */
+    --modal-gradient-start: 340 75% 70%; /* Light Gulabi Pink */
+    --modal-gradient-end: 195 80% 65%; /* Light Blue */
     
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -55,22 +55,22 @@
     --card-foreground: 0 0% 95%;
     --popover: 320 50% 8%;
     --popover-foreground: 0 0% 95%;
-    --primary: 266 46% 31%; /* Royal Purple */
+    --primary: 340 82% 52%; /* Gulabi Pink */
     --primary-foreground: 0 0% 100%;
-    --secondary: 285 49% 33%; /* Purple Magenta */
-    --secondary-foreground: 0 0% 100%;
-    --muted: 320 30% 20%;
+    --secondary: 195 84% 75%; /* Light Blue */
+    --secondary-foreground: 0 0% 10%;
+    --muted: 340 30% 20%;
     --muted-foreground: 0 0% 65%;
-    --accent: 285 49% 33%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 200 90% 70%;
+    --accent-foreground: 0 0% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
     --border: 320 30% 20%;
     --input: 320 30% 20%;
-    --ring: 285 49% 33%;
-    --chart-1: 266 46% 31%;
-    --chart-2: 285 49% 33%;
-    --chart-3: 320 69% 11%;
+    --ring: 200 90% 70%;
+    --chart-1: 340 82% 52%;
+    --chart-2: 195 84% 75%;
+    --chart-3: 340 82% 52%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --sidebar-background: 240 5.9% 10%;
